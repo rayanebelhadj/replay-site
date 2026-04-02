@@ -7,18 +7,14 @@
 
 :root {
   --bg: #ffffff;
-  --bg-card: #f7f7f8;
-  --bg-card-hover: #efeff1;
-  --border: #e2e2e6;
-  --text: #1a1a2e;
-  --text-muted: #6b6b80;
-  --accent-1: #3b6ff5;
-  --accent-2: #9333ea;
-  --gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  --radius: 16px;
-  --radius-sm: 10px;
-  --green: #16a34a;
-  --red: #dc2626;
+  --bg-card: #f9f9fb;
+  --bg-card-hover: #f3f3f6;
+  --border: #e5e5e8;
+  --text: #1a1a1a;
+  --text-muted: #707070;
+  --accent: #2563eb;
+  --radius: 12px;
+  --radius-sm: 8px;
 }
 
 html {
@@ -105,18 +101,6 @@ section {
   position: relative;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(59,111,245,0.07) 0%, rgba(147,51,234,0.03) 40%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
 
 .hero .container {
   display: flex;
@@ -134,10 +118,7 @@ section {
 }
 
 .logo-dot {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
 }
 
 .subtitle {
@@ -188,10 +169,7 @@ section {
 .stat-number {
   font-size: 2.25rem;
   font-weight: 800;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
   line-height: 1.2;
   margin-bottom: 0.35rem;
 }
@@ -343,8 +321,8 @@ section {
 }
 
 .hud-badge {
-  background: rgba(59,111,245,0.2);
-  color: #7aabff;
+  background: rgba(37, 99, 235, 0.15);
+  color: #2563eb;
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 7px;
@@ -401,7 +379,7 @@ section {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--gradient);
+  background: var(--accent);
   color: #fff;
   font-weight: 700;
   font-size: 1.1rem;
@@ -521,7 +499,7 @@ section {
 }
 
 .comparison-table .highlight {
-  background: rgba(59,111,245,0.05);
+  background: #f0f4ff;
   color: var(--text);
 }
 
@@ -618,17 +596,6 @@ section {
   position: relative;
 }
 
-.waitlist::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(147,51,234,0.04) 0%, transparent 70%);
-  pointer-events: none;
-}
 
 .waitlist .section-title {
   margin-bottom: 0.75rem;
@@ -641,38 +608,9 @@ section {
 }
 
 .social-proof {
-  font-size: 0.8rem;
-  color: var(--accent-1);
-  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
   margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.social-proof-dots {
-  display: flex;
-  gap: -4px;
-}
-
-.social-proof-dot {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--gradient);
-  border: 2px solid var(--bg);
-  margin-left: -6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.social-proof-dot:first-child {
-  margin-left: 0;
 }
 
 .waitlist-form {
@@ -746,11 +684,12 @@ section {
   font-size: 0.75rem;
   font-weight: 500;
   text-decoration: none;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.2s ease;
 }
 
 .badge:hover {
-  border-color: var(--text-muted);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .badge svg {
@@ -827,22 +766,20 @@ section {
   font-size: 0.95rem;
   font-weight: 600;
   color: #fff;
-  background: var(--gradient);
-  background-size: 150% 150%;
+  background: var(--accent);
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(79,140,255,0.2), 0 4px 15px rgba(168,85,247,0.15);
+  background: #1d4ed8;
 }
 
 .cta:active {
-  transform: translateY(0);
+  opacity: 0.95;
 }
 
 .cta--large {
@@ -888,7 +825,7 @@ footer {
 
 /* ── Animations ── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 

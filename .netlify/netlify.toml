@@ -9,7 +9,6 @@ redirects = []
 [build]
 publish = "/root/Projects/replay/replay/site"
 publishOrigin = "config"
-base = "/root/Projects/replay/replay/site"
 
 [build.environment]
 
