@@ -210,7 +210,7 @@
       <h2 class="section-title fade-in" data-i18n="waitlist_title">Sois parmi les premiers</h2>
       <p class="waitlist-note fade-in" data-i18n="waitlist_note">Inscris-toi pour un accès anticipé. Lancement bientôt.</p>
       <div class="social-proof fade-in" data-i18n="social_proof">Rejoins les coachs déjà inscrits</div>
-      <form class="waitlist-form fade-in" method="POST" action="https://formspree.io/f/xkopvroo">
+      <form class="waitlist-form fade-in" id="waitlist-form">
         <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="email_placeholder" placeholder="ton@email.com">
         <button type="submit" class="cta" data-i18n="cta_submit">Rejoindre</button>
       </form>
@@ -275,6 +275,26 @@
   </footer>
 
   <script>
+    // ── Form submission ──
+    document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = e.target.email.value;
+      try {
+        const response = await fetch('/api/submit-waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        if (response.ok) {
+          window.location.href = '/thanks.html';
+        } else {
+          alert('Erreur lors de l\'inscription. Veuillez réessayer.');
+        }
+      } catch (err) {
+        alert('Erreur. Veuillez réessayer.');
+      }
+    });
+
     // ── Scroll fade-in ──
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
