@@ -1,7 +1,6 @@
 const https = require('https');
 
 exports.handler = async (event) => {
-  // Only POST
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
   }
@@ -12,43 +11,34 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: 'Email required' }) };
   }
 
-  const sendgridKey = process.env.SENDGRID_API_KEY;
-  if (!sendgridKey) {
-    return { statusCode: 500, body: JSON.stringify({ error: 'API key not configured' }) };
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    return { statusCode: 500, body: JSON.stringify({ error: 'GitHub token not configured' }) };
   }
 
-  const mailData = {
-    personalizations: [
-      {
-        to: [{ email: 'contact@replayteam.com' }],
-        subject: `New waitlist signup: ${email}`,
-      },
-    ],
-    from: { email: 'noreply@tryreplay.co', name: 'Replay' },
-    content: [
-      {
-        type: 'text/html',
-        value: `<p>New signup: <strong>${email}</strong></p>`,
-      },
-    ],
+  const issueData = {
+    title: `Waitlist: ${email}`,
+    body: `Email: ${email}\nTimestamp: ${new Date().toISOString()}`,
+    labels: ['waitlist'],
   };
 
   return new Promise((resolve) => {
-    const postData = JSON.stringify(mailData);
+    const postData = JSON.stringify(issueData);
     const options = {
-      hostname: 'api.sendgrid.com',
+      hostname: 'api.github.com',
       port: 443,
-      path: '/v3/mail/send',
+      path: '/repos/rayanebelhadj/replay-site/issues',
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${sendgridKey}`,
+        Authorization: `token ${token}`,
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData),
+        'User-Agent': 'Replay-Waitlist',
       },
     };
 
     const req = https.request(options, (res) => {
-      if (res.statusCode === 202) {
+      if (res.statusCode === 201) {
         resolve({
           statusCode: 200,
           body: JSON.stringify({ message: 'Subscribed successfully' }),
