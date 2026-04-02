@@ -557,8 +557,8 @@ section {
 }
 
 .founder-photo {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background: var(--bg-card);
   border: 2px solid var(--border);
