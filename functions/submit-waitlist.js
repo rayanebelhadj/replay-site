@@ -5,7 +5,13 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: 'Method not allowed' };
   }
 
-  const { email } = JSON.parse(event.body);
+  let email;
+  try {
+    const body = JSON.parse(event.body);
+    email = body.email;
+  } catch (e) {
+    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
+  }
 
   if (!email) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Email required' }) };
@@ -17,7 +23,7 @@ exports.handler = async (event) => {
   }
 
   const emailData = {
-    from: 'contact@replayteam.com',
+    from: 'noreply@replayteam.com',
     to: 'contact@replayteam.com',
     subject: `New waitlist signup: ${email}`,
     html: `<p>New signup from: <strong>${email}</strong></p><p>Timestamp: ${new Date().toISOString()}</p>`,
@@ -38,22 +44,31 @@ exports.handler = async (event) => {
     };
 
     const req = https.request(options, (res) => {
-      if (res.statusCode === 200) {
-        resolve({
-          statusCode: 200,
-          body: JSON.stringify({ message: 'Subscribed successfully' }),
-          headers: { 'Content-Type': 'application/json' },
-        });
-      } else {
-        resolve({
-          statusCode: 500,
-          body: JSON.stringify({ error: 'Failed to subscribe' }),
-          headers: { 'Content-Type': 'application/json' },
-        });
-      }
+      let data = '';
+      res.on('data', (chunk) => {
+        data += chunk;
+      });
+
+      res.on('end', () => {
+        if (res.statusCode === 200) {
+          resolve({
+            statusCode: 200,
+            body: JSON.stringify({ message: 'Subscribed successfully' }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+        } else {
+          console.error('Resend error:', res.statusCode, data);
+          resolve({
+            statusCode: res.statusCode,
+            body: JSON.stringify({ error: 'Failed to subscribe', details: data }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+        }
+      });
     });
 
-    req.on('error', () => {
+    req.on('error', (err) => {
+      console.error('Request error:', err);
       resolve({
         statusCode: 500,
         body: JSON.stringify({ error: 'Server error' }),
