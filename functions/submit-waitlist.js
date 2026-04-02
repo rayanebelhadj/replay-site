@@ -11,34 +11,34 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: 'Email required' }) };
   }
 
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    return { statusCode: 500, body: JSON.stringify({ error: 'GitHub token not configured' }) };
+  const resendKey = process.env.RESEND_API_KEY;
+  if (!resendKey) {
+    return { statusCode: 500, body: JSON.stringify({ error: 'API key not configured' }) };
   }
 
-  const issueData = {
-    title: `Waitlist: ${email}`,
-    body: `Email: ${email}\nTimestamp: ${new Date().toISOString()}`,
-    labels: ['waitlist'],
+  const emailData = {
+    from: 'contact@replayteam.com',
+    to: 'contact@replayteam.com',
+    subject: `New waitlist signup: ${email}`,
+    html: `<p>New signup from: <strong>${email}</strong></p><p>Timestamp: ${new Date().toISOString()}</p>`,
   };
 
   return new Promise((resolve) => {
-    const postData = JSON.stringify(issueData);
+    const postData = JSON.stringify(emailData);
     const options = {
-      hostname: 'api.github.com',
+      hostname: 'api.resend.com',
       port: 443,
-      path: '/repos/rayanebelhadj/replay-site/issues',
+      path: '/emails',
       method: 'POST',
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: `Bearer ${resendKey}`,
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData),
-        'User-Agent': 'Replay-Waitlist',
       },
     };
 
     const req = https.request(options, (res) => {
-      if (res.statusCode === 201) {
+      if (res.statusCode === 200) {
         resolve({
           statusCode: 200,
           body: JSON.stringify({ message: 'Subscribed successfully' }),
