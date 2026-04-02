@@ -1,3 +1,2 @@
-[build]
-  publish = "."
-  functions = "functions"
+# This file is no longer used (GitHub Pages deployment)
+# Kept for reference only
