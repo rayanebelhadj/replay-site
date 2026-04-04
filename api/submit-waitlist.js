@@ -1,6 +1,4 @@
-import https from 'https';
-
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -23,40 +21,25 @@ export default function handler(req, res) {
     html: `<p>New signup from: <strong>${email}</strong></p><p>Timestamp: ${new Date().toISOString()}</p>`,
   };
 
-  const postData = JSON.stringify(emailData);
-  const options = {
-    hostname: 'api.resend.com',
-    port: 443,
-    path: '/emails',
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${resendKey}`,
-      'Content-Type': 'application/json',
-      'Content-Length': Buffer.byteLength(postData),
-    },
-  };
-
-  const request = https.request(options, (response) => {
-    let data = '';
-    response.on('data', (chunk) => {
-      data += chunk;
+  try {
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${resendKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(emailData),
     });
 
-    response.on('end', () => {
-      if (response.statusCode === 200) {
-        res.status(200).json({ message: 'Subscribed successfully' });
-      } else {
-        console.error('Resend error:', response.statusCode, data);
-        res.status(response.statusCode).json({ error: 'Failed to subscribe' });
-      }
-    });
-  });
-
-  request.on('error', (err) => {
+    if (response.ok) {
+      return res.status(200).json({ message: 'Subscribed successfully' });
+    } else {
+      const error = await response.text();
+      console.error('Resend error:', response.status, error);
+      return res.status(response.status).json({ error: 'Failed to subscribe' });
+    }
+  } catch (err) {
     console.error('Request error:', err);
-    res.status(500).json({ error: 'Server error' });
-  });
-
-  request.write(postData);
-  request.end();
+    return res.status(500).json({ error: 'Server error' });
+  }
 }
