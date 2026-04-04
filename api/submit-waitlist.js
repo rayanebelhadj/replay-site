@@ -11,8 +11,11 @@ export default async function handler(req, res) {
 
   const resendKey = process.env.RESEND_API_KEY;
   if (!resendKey) {
+    console.error('RESEND_API_KEY not found in environment');
     return res.status(500).json({ error: 'API key not configured' });
   }
+
+  console.log('Using API key:', resendKey.substring(0, 10) + '...');
 
   const emailData = {
     from: 'noreply@replayteam.com',
@@ -31,15 +34,17 @@ export default async function handler(req, res) {
       body: JSON.stringify(emailData),
     });
 
+    const responseData = await response.json();
+
     if (response.ok) {
+      console.log('Email sent successfully:', responseData);
       return res.status(200).json({ message: 'Subscribed successfully' });
     } else {
-      const error = await response.text();
-      console.error('Resend error:', response.status, error);
-      return res.status(response.status).json({ error: 'Failed to subscribe' });
+      console.error('Resend error:', response.status, responseData);
+      return res.status(500).json({ error: 'Failed to subscribe', details: responseData });
     }
   } catch (err) {
-    console.error('Request error:', err);
-    return res.status(500).json({ error: 'Server error' });
+    console.error('Request error:', err.message);
+    return res.status(500).json({ error: 'Server error', details: err.message });
   }
 }
