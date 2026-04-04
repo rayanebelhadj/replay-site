@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   console.log('Using API key:', resendKey.substring(0, 10) + '...');
 
   const emailData = {
-    from: 'onboarding@resend.dev',
+    from: 'contact@replayteam.com',
     to: 'contact@replayteam.com',
     subject: `New waitlist signup: ${email}`,
     html: `<p>New signup from: <strong>${email}</strong></p><p>Timestamp: ${new Date().toISOString()}</p>`,
