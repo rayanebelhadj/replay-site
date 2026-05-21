@@ -64,8 +64,8 @@
     <div class="container">
       <div class="hero-text">
         <p class="hero-eyebrow" data-i18n="hero_eyebrow">2026 — Beta privée</p>
-        <h1 data-i18n="hero_h1">L'analyse sportive par IA, pour tout le monde.</h1>
-        <p class="lead" data-i18n="lead">Filme ton match. Replay fait le reste. Conseils de coaching personnalisés en quelques secondes.</p>
+        <h1 data-i18n="hero_h1">L'analyse sportive d'élite, dans la poche de chaque coach.</h1>
+        <p class="lead" data-i18n="lead">Filme ton match avec un téléphone. Replay le découpe, identifie chaque joueur, repère les moments clés et te renvoie une analyse coachable — en quelques minutes.</p>
         <div class="hero-cta">
           <a href="#waitlist" class="cta cta--large" data-i18n="cta_hero">Rejoindre la liste d'attente</a>
           <a href="#how" class="cta cta--ghost cta--large" data-i18n="cta_secondary">Voir comment ça marche</a>
@@ -123,54 +123,227 @@
       </header>
       <div class="steps">
         <div class="step fade-in">
+          <div class="step-visual step-visual--filme" aria-hidden="true">
+            <span class="rec-dot"></span>
+            <span class="rec-label">ENR · 00:42</span>
+            <span class="step-visual__time">90 min</span>
+          </div>
           <div class="step-num">Étape 01</div>
           <h3 data-i18n="step1_title">Filme</h3>
-          <p data-i18n="step1_desc">Filme ton match ou entraînement avec n'importe quel téléphone. Aucune caméra spéciale requise.</p>
+          <p data-i18n="step1_desc">Trépied au bord du terrain, téléphone en mode paysage. Aucune caméra spéciale. Aucun capteur. Aucune installation.</p>
         </div>
         <div class="step fade-in">
+          <div class="step-visual step-visual--analyse" aria-hidden="true">
+            <div class="ana-bar"><div class="ana-bar__fill"></div></div>
+            <ul class="ana-list">
+              <li class="ana-list__item ana-list__item--done">Joueurs détectés</li>
+              <li class="ana-list__item ana-list__item--done">Stats calculées</li>
+              <li class="ana-list__item">Coaching généré…</li>
+            </ul>
+          </div>
           <div class="step-num">Étape 02</div>
           <h3 data-i18n="step2_title">Analyse</h3>
-          <p data-i18n="step2_desc">L'IA détecte chaque joueur, suit les déplacements et identifie les moments clés automatiquement.</p>
+          <p data-i18n="step2_desc">Replay détecte chaque joueur, suit les courses, identifie les passes clés, les tirs et les pertes de balle. Tout est traité dans le nuage.</p>
         </div>
         <div class="step fade-in">
+          <div class="step-visual step-visual--progresse" aria-hidden="true">
+            <div class="tip-mini">
+              <span class="tip-mini__tag">CONSEIL · 03</span>
+              <span class="tip-mini__title">Resserrer le bloc défensif</span>
+              <span class="tip-mini__meta">+12 % récupérations</span>
+            </div>
+          </div>
           <div class="step-num">Étape 03</div>
           <h3 data-i18n="step3_title">Progresse</h3>
-          <p data-i18n="step3_desc">Reçois des conseils de coaching personnalisés et des exercices ciblés pour t'améliorer.</p>
+          <p data-i18n="step3_desc">Tu reçois des extraits annotés, des stats par joueur et des conseils de coaching ciblés — prêts à partager avec l'équipe.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ Features ═══ -->
-  <section class="features" id="features">
+  <!-- ═══ What Replay returns ═══ -->
+  <section class="returns" id="features">
     <div class="container">
       <header class="s-head fade-in">
-        <span class="num">02 — Produit</span>
-        <h2 class="title" data-i18n="features_title">Ce que Replay fait pour toi</h2>
-        <span class="meta" data-i18n="features_subtitle">Outils pro · prix accessible</span>
+        <span class="num">02 — Livrables</span>
+        <h2 class="title" data-i18n="returns_title">Ce que tu reçois après chaque match</h2>
+        <span class="meta" data-i18n="returns_subtitle">Trois livrables prêts à coacher · pas de tableur, pas de jargon.</span>
       </header>
-      <div class="features-grid">
-        <div class="feature-card fade-in">
-          <div class="feat-num">F-01</div>
-          <h3 data-i18n="feat1_title">Détection des joueurs</h3>
-          <p data-i18n="feat1_desc">L'IA identifie et suit chaque joueur en temps réel, même en mouvement rapide.</p>
+      <div class="returns-grid">
+        <!-- Clip annoté -->
+        <div class="return-card fade-in">
+          <div class="return-visual" aria-hidden="true">
+            <div class="ret-clip">
+              <span class="ret-clip__time">12:34</span>
+              <span class="ret-clip__tag">PASSE CLÉ</span>
+              <div class="ret-clip__pitch">
+                <span class="ret-clip__dot ret-clip__dot--a"></span>
+                <span class="ret-clip__dot ret-clip__dot--a ret-clip__dot--7"></span>
+                <span class="ret-clip__dot ret-clip__dot--b"></span>
+                <span class="ret-clip__dot ret-clip__dot--ball"></span>
+                <span class="ret-clip__arrow"></span>
+              </div>
+            </div>
+          </div>
+          <div class="return-body">
+            <span class="return-num">L-01</span>
+            <h3 data-i18n="ret1_title">Extraits annotés</h3>
+            <p data-i18n="ret1_desc">Chaque action clé devient un clip de 10–20 s avec les joueurs entourés, la balle suivie et le moment étiqueté (passe, tir, récupération).</p>
+          </div>
         </div>
-        <div class="feature-card fade-in">
-          <div class="feat-num">F-02</div>
-          <h3 data-i18n="feat2_title">Conseils IA personnalisés</h3>
-          <p data-i18n="feat2_desc">Des recommandations de coaching adaptées au niveau et au style de jeu de chaque joueur.</p>
+
+        <!-- Heatmap -->
+        <div class="return-card fade-in">
+          <div class="return-visual" aria-hidden="true">
+            <svg class="ret-heatmap" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="hot" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#ffd23d" stop-opacity="0.85"/>
+                  <stop offset="50%" stop-color="#ff8c3d" stop-opacity="0.55"/>
+                  <stop offset="100%" stop-color="#ff5050" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect x="0" y="0" width="200" height="130" fill="#1f6638"/>
+              <rect x="6" y="6" width="188" height="118" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+              <line x1="100" y1="6" x2="100" y2="124" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+              <circle cx="100" cy="65" r="12" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+              <circle cx="60" cy="55" r="32" fill="url(#hot)"/>
+              <circle cx="135" cy="80" r="24" fill="url(#hot)" opacity="0.85"/>
+              <circle cx="40" cy="90" r="18" fill="url(#hot)" opacity="0.7"/>
+            </svg>
+          </div>
+          <div class="return-body">
+            <span class="return-num">L-02</span>
+            <h3 data-i18n="ret2_title">Heatmap par joueur</h3>
+            <p data-i18n="ret2_desc">Une carte de chaleur lit instantanément qui couvre quelle zone, qui décroche, qui presse — pas besoin d'analyser 90 minutes de vidéo.</p>
+          </div>
         </div>
-        <div class="feature-card fade-in">
-          <div class="feat-num">F-03</div>
-          <h3 data-i18n="feat3_title">Multi-sport</h3>
-          <p data-i18n="feat3_desc">Soccer, basketball, volleyball — et d'autres sports à venir. Une seule app pour tous.</p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="feat-num">F-04</div>
-          <h3 data-i18n="feat4_title">Aucun équipement</h3>
-          <p data-i18n="feat4_desc">Ton téléphone suffit. Pas de caméra, capteur ou installation nécessaire.</p>
+
+        <!-- Coaching tip -->
+        <div class="return-card fade-in">
+          <div class="return-visual" aria-hidden="true">
+            <div class="ret-tip">
+              <div class="ret-tip__head">
+                <span class="ret-tip__tag">CONSEIL · 03</span>
+                <span class="ret-tip__delta">+12 %</span>
+              </div>
+              <h4 class="ret-tip__title">Resserrer le bloc défensif après perte</h4>
+              <p class="ret-tip__body">Les 4 dernières pertes de balle ont déclenché un contre dans les 8 secondes. Travailler le repli collectif à l'entraînement (drill 6v4).</p>
+              <div class="ret-tip__foot">
+                <span>Drill suggéré · 6v4 transition</span>
+                <span class="ret-tip__chev">→</span>
+              </div>
+            </div>
+          </div>
+          <div class="return-body">
+            <span class="return-num">L-03</span>
+            <h3 data-i18n="ret3_title">Conseils de coaching IA</h3>
+            <p data-i18n="ret3_desc">Replay observe les patrons récurrents et te suggère un drill ciblé pour le prochain entraînement. Court, concret, basé sur ton match.</p>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ Sports supported ═══ -->
+  <section class="sports">
+    <div class="container">
+      <div class="sports-strip fade-in">
+        <span class="sports-strip__label" data-i18n="sports_label">Sports supportés</span>
+        <ul class="sports-strip__list">
+          <li class="sports-strip__item sports-strip__item--now">
+            <span class="sports-strip__tag">MAINTENANT</span>
+            <span class="sports-strip__name">Soccer 7v7</span>
+          </li>
+          <li class="sports-strip__item sports-strip__item--next">
+            <span class="sports-strip__tag">PROCHAINEMENT</span>
+            <span class="sports-strip__name">Soccer 11v11</span>
+          </li>
+          <li class="sports-strip__item sports-strip__item--later">
+            <span class="sports-strip__tag">2027</span>
+            <span class="sports-strip__name">Basketball · Volleyball · Hockey</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Pricing ═══ -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <header class="s-head fade-in">
+        <span class="num">03 — Tarifs</span>
+        <h2 class="title" data-i18n="pricing_title">Choisis ton plan</h2>
+        <span class="meta" data-i18n="pricing_subtitle">Une version gratuite vraie de vraie. Les pros payent pour l'illimité.</span>
+      </header>
+      <div class="pricing-grid">
+        <div class="price-card fade-in">
+          <span class="price-card__tag">FREE</span>
+          <span class="price-card__name">Replay</span>
+          <div class="price-card__price">
+            <span class="price-card__amount">0 $</span>
+            <span class="price-card__unit">à vie</span>
+          </div>
+          <ul class="price-card__list">
+            <li>1 analyse complète / mois</li>
+            <li>Extraits annotés &amp; heatmaps</li>
+            <li>1 conseil de coaching par match</li>
+            <li>Soccer 7v7</li>
+          </ul>
+          <a href="#waitlist" class="cta cta--ghost price-card__cta">Commencer gratuitement</a>
+        </div>
+
+        <div class="price-card price-card--featured fade-in">
+          <span class="price-card__tag">RECOMMANDÉ</span>
+          <span class="price-card__name">Replay+</span>
+          <div class="price-card__price">
+            <span class="price-card__amount">99 $</span>
+            <span class="price-card__unit">/ an</span>
+          </div>
+          <ul class="price-card__list">
+            <li>Jusqu'à 30 analyses / mois</li>
+            <li>Conseils IA illimités</li>
+            <li>Rapport PDF par match</li>
+            <li>Comparaison entre matchs</li>
+            <li>Support prioritaire</li>
+          </ul>
+          <a href="#waitlist" class="cta cta--accent price-card__cta">Rejoindre la liste</a>
+        </div>
+
+        <div class="price-card fade-in">
+          <span class="price-card__tag">PRO</span>
+          <span class="price-card__name">Replay Pro</span>
+          <div class="price-card__price">
+            <span class="price-card__amount">1 490 $</span>
+            <span class="price-card__unit">/ an / club</span>
+          </div>
+          <ul class="price-card__list">
+            <li>Analyses illimitées</li>
+            <li>Multi-équipe (jusqu'à 8)</li>
+            <li>Export vidéo HD avec overlays</li>
+            <li>Accès API &amp; intégrations</li>
+            <li>Onboarding personnalisé</li>
+          </ul>
+          <a href="mailto:contact@replayteam.com?subject=Replay%20Pro" class="cta cta--ghost price-card__cta">Nous parler</a>
+        </div>
+
+        <div class="price-card price-card--venue fade-in">
+          <span class="price-card__tag">VENUE</span>
+          <span class="price-card__name">Pour les terrains</span>
+          <div class="price-card__price">
+            <span class="price-card__amount">Rev-share</span>
+            <span class="price-card__unit">40 %</span>
+          </div>
+          <ul class="price-card__list">
+            <li>Caméras fixes installées au terrain</li>
+            <li>Replay automatique pour chaque match</li>
+            <li>Aucun frais d'installation</li>
+            <li>Lancement 2027 H2</li>
+          </ul>
+          <a href="mailto:contact@replayteam.com?subject=Replay%20Venue" class="cta cta--ghost price-card__cta">Devenir partenaire</a>
+        </div>
+      </div>
+      <p class="pricing-note fade-in" data-i18n="pricing_note">Prix en CAD · sans engagement · TPS/TVQ en sus pour le Québec.</p>
     </div>
   </section>
 
@@ -243,22 +416,87 @@
     </div>
   </section>
 
-  <!-- ═══ Founder ═══ -->
-  <section class="founder" id="founder">
+  <!-- ═══ Capture guide ═══ -->
+  <section class="capture" id="capture">
     <div class="container">
       <header class="s-head fade-in">
-        <span class="num">04 — Fondateur</span>
-        <h2 class="title" data-i18n="founder_title">Qui est derrière Replay</h2>
-        <span class="meta">Montréal · Québec</span>
+        <span class="num">05 — Capture</span>
+        <h2 class="title" data-i18n="capture_title">Comment filmer pour de bons résultats</h2>
+        <span class="meta" data-i18n="capture_subtitle">Le « bon » setup tient en 5 lignes. C'est gratuit.</span>
       </header>
-      <div class="founder-card fade-in">
+      <div class="capture-grid">
+        <ul class="capture-list fade-in">
+          <li><span class="capture-list__k">01</span><div><strong>Trépied au bord du terrain.</strong> Au niveau de la ligne médiane, côté tribunes. Pas dans le but.</div></li>
+          <li><span class="capture-list__k">02</span><div><strong>Téléphone en mode paysage.</strong> Le terrain doit remplir l'image — pas de zoom, pas de balayage.</div></li>
+          <li><span class="capture-list__k">03</span><div><strong>Une seule prise.</strong> Lance la caméra avant le coup d'envoi, laisse rouler jusqu'au coup de sifflet final.</div></li>
+          <li><span class="capture-list__k">04</span><div><strong>Lumière naturelle suffit.</strong> Replay tolère grand-angle, contre-jour modéré et résolution 1080p ou plus.</div></li>
+          <li><span class="capture-list__k">05</span><div><strong>L'app vérifie le cadrage</strong> pendant les 5 premières secondes et te corrige avant que tu lances le match.</div></li>
+        </ul>
+        <figure class="capture-diagram fade-in" aria-label="Position recommandée du téléphone : trépied à mi-terrain, côté touche">
+          <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- pitch -->
+            <rect x="20" y="20" width="280" height="160" fill="#1f6638" rx="4"/>
+            <rect x="20" y="20" width="280" height="160" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" rx="4"/>
+            <line x1="160" y1="20" x2="160" y2="180" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <circle cx="160" cy="100" r="22" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <rect x="20" y="60" width="32" height="80" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <rect x="268" y="60" width="32" height="80" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+            <!-- phone position -->
+            <line x1="160" y1="180" x2="160" y2="210" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 3"/>
+            <rect x="152" y="200" width="16" height="12" fill="var(--accent)" rx="2"/>
+            <text x="160" y="210" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink)" letter-spacing="1.5">TRÉPIED</text>
+            <!-- viewing cone -->
+            <polygon points="160,200 80,40 240,40" fill="var(--accent)" fill-opacity="0.1" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3"/>
+          </svg>
+          <figcaption>Position recommandée · trépied à la ligne médiane, côté touche.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Privacy & trust ═══ -->
+  <section class="privacy" id="privacy">
+    <div class="container">
+      <header class="s-head fade-in">
+        <span class="num">06 — Vie privée</span>
+        <h2 class="title" data-i18n="privacy_title">Conçu pour le sport amateur, sans compromis sur les données.</h2>
+        <span class="meta" data-i18n="privacy_subtitle">Replay traite des vidéos de jeunes joueurs. On le prend au sérieux.</span>
+      </header>
+      <div class="privacy-grid">
+        <div class="privacy-item fade-in">
+          <span class="privacy-item__k">P-01</span>
+          <h3 data-i18n="priv1_t">Vidéo sur l'appareil</h3>
+          <p data-i18n="priv1_d">La vidéo brute ne quitte jamais ton téléphone. Seules les images extraites sont envoyées au serveur.</p>
+        </div>
+        <div class="privacy-item fade-in">
+          <span class="privacy-item__k">P-02</span>
+          <h3 data-i18n="priv2_t">Chiffrement bout-en-bout</h3>
+          <p data-i18n="priv2_d">Les images sont chiffrées avant l'envoi et déchiffrées uniquement en mémoire au moment de l'analyse.</p>
+        </div>
+        <div class="privacy-item fade-in">
+          <span class="privacy-item__k">P-03</span>
+          <h3 data-i18n="priv3_t">Suppression immédiate</h3>
+          <p data-i18n="priv3_d">Dès que l'analyse est terminée, les images sont effacées des serveurs. Aucun stockage.</p>
+        </div>
+        <div class="privacy-item fade-in">
+          <span class="privacy-item__k">P-04</span>
+          <h3 data-i18n="priv4_t">Aucun partage</h3>
+          <p data-i18n="priv4_d">Tes vidéos et tes statistiques ne sont jamais revendues, ni utilisées pour entraîner d'autres modèles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Founder (compact) ═══ -->
+  <section class="founder" id="founder">
+    <div class="container">
+      <div class="founder-mini fade-in">
         <div class="founder-photo">
           <img src="founder.jpg" alt="Rayane Belhadj">
         </div>
         <div class="founder-text">
-          <blockquote class="founder-quote" data-i18n="founder_quote">J'ai passé des heures à filmer des matchs sans jamais pouvoir en tirer de vraies données. Les outils pro coûtent des milliers de dollars. J'ai construit Replay pour que chaque coach et chaque joueur ait accès à l'analyse qui fait la différence.</blockquote>
-          <p class="founder-name">Rayane Belhadj</p>
-          <p class="founder-role" data-i18n="founder_role">Fondateur · Replay</p>
+          <blockquote class="founder-quote" data-i18n="founder_quote">« Les outils pro coûtent des milliers de dollars. J'ai construit Replay pour que chaque coach amateur ait accès à l'analyse qui fait la différence. »</blockquote>
+          <p class="founder-meta"><span class="founder-name">Rayane Belhadj</span> · <span data-i18n="founder_role">Fondateur, Replay</span> · Montréal QC</p>
         </div>
       </div>
     </div>
@@ -297,34 +535,22 @@
   <section class="faq" id="faq">
     <div class="container">
       <header class="s-head fade-in">
-        <span class="num">06 — FAQ</span>
+        <span class="num">07 — FAQ</span>
         <h2 class="title" data-i18n="faq_title">Questions fréquentes</h2>
-        <span class="meta">&nbsp;</span>
+        <span class="meta" data-i18n="faq_subtitle">Tu n'as pas trouvé ta réponse ? Écris-nous, on répond en moins de 24 h.</span>
       </header>
       <div class="faq-list fade-in">
         <details class="faq-item">
-          <summary data-i18n="faq1_q">Quels sports sont supportés ?</summary>
-          <div class="faq-answer" data-i18n="faq1_a">Replay lance avec le soccer (7v7 et 11v11). Le basketball et le volleyball suivront peu après. D'autres sports seront ajoutés selon la demande.</div>
+          <summary data-i18n="faq1_q">Quel type de caméra ou trépied me faut-il ?</summary>
+          <div class="faq-answer" data-i18n="faq1_a">Aucune caméra spéciale. Le téléphone que tu utilises tous les jours suffit. Un trépied basique (~30 $) est recommandé pour stabiliser l'image, mais ce n'est pas obligatoire. L'app valide ton cadrage dans les 5 premières secondes du match.</div>
         </details>
         <details class="faq-item">
-          <summary data-i18n="faq2_q">Est-ce que Replay est gratuit ?</summary>
-          <div class="faq-answer" data-i18n="faq2_a">Replay offre une version gratuite avec une analyse par mois. L'abonnement Replay+ débloque les analyses illimitées et les fonctionnalités avancées.</div>
+          <summary data-i18n="faq2_q">Mes vidéos et celles de mes joueurs sont-elles vraiment privées ?</summary>
+          <div class="faq-answer" data-i18n="faq2_a">Oui. La vidéo brute ne quitte jamais ton téléphone. Replay extrait des images, les chiffre, les envoie au serveur, les analyse, puis les supprime immédiatement. Aucun stockage, aucune revente, aucune utilisation pour entraîner d'autres modèles.</div>
         </details>
         <details class="faq-item">
-          <summary data-i18n="faq3_q">Faut-il une connexion internet ?</summary>
-          <div class="faq-answer" data-i18n="faq3_a">Oui, une connexion est nécessaire pour l'analyse IA. Les images sont envoyées de manière sécurisée au cloud, analysées, puis supprimées immédiatement.</div>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq4_q">Quel type de caméra me faut-il ?</summary>
-          <div class="faq-answer" data-i18n="faq4_a">Aucune caméra spéciale. N'importe quel téléphone avec une caméra suffit. Filme depuis le bord du terrain et Replay s'occupe du reste.</div>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq5_q">Mes vidéos restent-elles privées ?</summary>
-          <div class="faq-answer" data-i18n="faq5_a">Absolument. Les images envoyées au cloud sont chiffrées et supprimées dès l'analyse terminée. Aucune vidéo n'est stockée sur nos serveurs.</div>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq6_q">Comment Replay se compare à Hudl ou Veo ?</summary>
-          <div class="faq-answer" data-i18n="faq6_a">Hudl et Veo sont d'excellents outils pour les organisations avec des budgets importants. Replay cible les 99% restants : coachs bénévoles, parents, petits clubs. Pas de caméra à acheter, pas d'abonnement coûteux, et des conseils IA que les autres n'offrent pas.</div>
+          <summary data-i18n="faq3_q">Quand Replay sera-t-il disponible pour mon sport ?</summary>
+          <div class="faq-answer" data-i18n="faq3_a">Soccer 7v7 dès le lancement (H2 2026). Soccer 11v11 quelques mois plus tard. Basketball, volleyball et hockey en 2027 selon la demande. Inscris-toi à la liste pour voter pour ton sport.</div>
         </details>
       </div>
     </div>
@@ -457,8 +683,8 @@
         nav_faq: "FAQ",
         nav_cta: "Waitlist",
         hero_eyebrow: "2026 — Private beta",
-        hero_h1: "AI sports analysis, for everyone.",
-        lead: "Film your match. Replay does the rest. Personalised coaching tips in seconds.",
+        hero_h1: "Elite sports analysis, in every coach's pocket.",
+        lead: "Film your match with a phone. Replay cuts it up, identifies every player, finds the key moments and hands you back a coachable analysis — in minutes.",
         description: `Replay is a mobile app that automatically analyses game and training videos using artificial intelligence. Just <strong>film with your phone</strong>. The app detects players, tracks movements, identifies key actions and generates <strong>personalised coaching tips</strong>. No specialised equipment needed.`,
         cta_hero: "Join the waitlist",
         cta_secondary: "See how it works",
@@ -478,11 +704,11 @@
         how_title: "How it works",
         how_subtitle: "Three steps · zero equipment",
         step1_title: "Film",
-        step1_desc: "Film your game or practice with any phone. No special camera required.",
+        step1_desc: "Tripod at the sideline, phone in landscape. No camera, no sensor, no setup.",
         step2_title: "Analyse",
-        step2_desc: "AI detects every player, tracks movements and identifies key moments automatically.",
+        step2_desc: "Replay detects every player, tracks runs and finds key passes, shots and turnovers. Everything happens in the cloud.",
         step3_title: "Improve",
-        step3_desc: "Get personalised coaching tips and targeted drills to level up your game.",
+        step3_desc: "You get annotated clips, per-player stats and targeted coaching tips — ready to share with the team.",
         features_title: "What Replay does for you",
         features_subtitle: "Pro tools · accessible price",
         feat1_title: "Player detection",
@@ -517,19 +743,38 @@
         referral: "<strong>Invite a coach</strong> and move up the waitlist. A referral link will be sent after you sign up.",
         badge_ios: "iOS — Coming soon",
         badge_android: "Android — Coming soon",
+        returns_title: "What you get back after every match",
+        returns_subtitle: "Three ready-to-coach deliverables — no spreadsheet, no jargon.",
+        ret1_title: "Annotated clips",
+        ret1_desc: "Each key action becomes a 10–20 s clip with players outlined, the ball tracked and the moment labelled (pass, shot, recovery).",
+        ret2_title: "Per-player heatmap",
+        ret2_desc: "A heat map shows instantly who covers which zone, who drops, who presses — no need to rewatch 90 minutes of footage.",
+        ret3_title: "AI coaching tips",
+        ret3_desc: "Replay spots recurring patterns and suggests a targeted drill for your next session. Short, concrete, based on your match.",
+        sports_label: "Supported sports",
+        pricing_title: "Pick your plan",
+        pricing_subtitle: "A free tier that actually works. Pros pay for unlimited.",
+        pricing_note: "Prices in CAD · no commitment · GST/QST extra in Quebec.",
+        capture_title: "How to film for the best results",
+        capture_subtitle: "The right setup fits in 5 lines. It's free.",
+        privacy_title: "Built for youth sport, no compromise on data.",
+        privacy_subtitle: "Replay handles videos of young players. We take it seriously.",
+        priv1_t: "Video stays on device",
+        priv1_d: "Raw video never leaves your phone. Only extracted frames are sent to the server.",
+        priv2_t: "End-to-end encryption",
+        priv2_d: "Frames are encrypted before upload and decrypted only in memory at analysis time.",
+        priv3_t: "Immediate deletion",
+        priv3_d: "As soon as analysis finishes, frames are wiped from our servers. Zero storage.",
+        priv4_t: "Never shared",
+        priv4_d: "Your videos and stats are never sold, never used to train other models.",
         faq_title: "Frequently asked questions",
-        faq1_q: "What sports are supported?",
-        faq1_a: "Replay launches with soccer (7v7 and 11v11). Basketball and volleyball will follow shortly. More sports will be added based on demand.",
-        faq2_q: "Is Replay free?",
-        faq2_a: "Replay offers a free tier with one analysis per month. The Replay+ subscription unlocks unlimited analyses and advanced features.",
-        faq3_q: "Do I need an internet connection?",
-        faq3_a: "Yes, a connection is required for AI analysis. Frames are securely sent to the cloud, analysed, then immediately deleted.",
-        faq4_q: "What kind of camera do I need?",
-        faq4_a: "No special camera. Any phone with a camera will do. Film from the sideline and Replay handles the rest.",
-        faq5_q: "Are my videos kept private?",
-        faq5_a: "Absolutely. Frames sent to the cloud are encrypted and deleted as soon as analysis is complete. No video is stored on our servers.",
-        faq6_q: "How does Replay compare to Hudl or Veo?",
-        faq6_a: "Hudl and Veo are great tools for organisations with large budgets. Replay targets the other 99%: volunteer coaches, parents, small clubs. No camera to buy, no expensive subscription, and AI coaching tips the others don't offer.",
+        faq_subtitle: "Didn't find your answer? Write to us — we reply in under 24 h.",
+        faq1_q: "What kind of camera or tripod do I need?",
+        faq1_a: "No special camera. Your everyday phone is enough. A basic tripod (~$30) is recommended for stable footage but not required. The app validates your framing in the first 5 seconds of the match.",
+        faq2_q: "Are my videos and my players' videos really private?",
+        faq2_a: "Yes. Raw video never leaves your phone. Replay extracts frames, encrypts them, sends them to the server, runs analysis, then deletes them immediately. No storage, no resale, no use for training other models.",
+        faq3_q: "When will Replay be available for my sport?",
+        faq3_a: "Soccer 7v7 at launch (H2 2026). Soccer 11v11 a few months later. Basketball, volleyball and hockey in 2027 based on demand. Sign up to vote for your sport.",
         footer_tagline: "AI sports analysis. Montréal, Québec.",
         footer_product: "Product",
         footer_contact: "Contact",
@@ -542,8 +787,8 @@
         nav_faq: "FAQ",
         nav_cta: "Liste d'attente",
         hero_eyebrow: "2026 — Beta privée",
-        hero_h1: "L'analyse sportive par IA, pour tout le monde.",
-        lead: "Filme ton match. Replay fait le reste. Conseils de coaching personnalisés en quelques secondes.",
+        hero_h1: "L'analyse sportive d'élite, dans la poche de chaque coach.",
+        lead: "Filme ton match avec un téléphone. Replay le découpe, identifie chaque joueur, repère les moments clés et te renvoie une analyse coachable — en quelques minutes.",
         description: `Replay est une application mobile qui analyse automatiquement les vidéos de matchs et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions clés et génère des <strong>conseils de coaching personnalisés</strong>. Aucun équipement spécialisé nécessaire.`,
         cta_hero: "Rejoindre la liste d'attente",
         cta_secondary: "Voir comment ça marche",
@@ -563,11 +808,11 @@
         how_title: "Comment ça marche",
         how_subtitle: "Trois étapes · zéro équipement",
         step1_title: "Filme",
-        step1_desc: "Filme ton match ou entraînement avec n'importe quel téléphone. Aucune caméra spéciale requise.",
+        step1_desc: "Trépied au bord du terrain, téléphone en mode paysage. Aucune caméra spéciale. Aucun capteur. Aucune installation.",
         step2_title: "Analyse",
-        step2_desc: "L'IA détecte chaque joueur, suit les déplacements et identifie les moments clés automatiquement.",
+        step2_desc: "Replay détecte chaque joueur, suit les courses, identifie les passes clés, les tirs et les pertes de balle. Tout est traité dans le nuage.",
         step3_title: "Progresse",
-        step3_desc: "Reçois des conseils de coaching personnalisés et des exercices ciblés pour t'améliorer.",
+        step3_desc: "Tu reçois des extraits annotés, des stats par joueur et des conseils de coaching ciblés — prêts à partager avec l'équipe.",
         features_title: "Ce que Replay fait pour toi",
         features_subtitle: "Outils pro · prix accessible",
         feat1_title: "Détection des joueurs",
@@ -602,19 +847,38 @@
         referral: "<strong>Invite un coach</strong> et remonte dans la liste d'attente. Un lien de parrainage te sera envoyé après ton inscription.",
         badge_ios: "iOS — Bientôt",
         badge_android: "Android — Bientôt",
+        returns_title: "Ce que tu reçois après chaque match",
+        returns_subtitle: "Trois livrables prêts à coacher · pas de tableur, pas de jargon.",
+        ret1_title: "Extraits annotés",
+        ret1_desc: "Chaque action clé devient un clip de 10–20 s avec les joueurs entourés, la balle suivie et le moment étiqueté (passe, tir, récupération).",
+        ret2_title: "Heatmap par joueur",
+        ret2_desc: "Une carte de chaleur lit instantanément qui couvre quelle zone, qui décroche, qui presse — pas besoin d'analyser 90 minutes de vidéo.",
+        ret3_title: "Conseils de coaching IA",
+        ret3_desc: "Replay observe les patrons récurrents et te suggère un drill ciblé pour le prochain entraînement. Court, concret, basé sur ton match.",
+        sports_label: "Sports supportés",
+        pricing_title: "Choisis ton plan",
+        pricing_subtitle: "Une version gratuite vraie de vraie. Les pros payent pour l'illimité.",
+        pricing_note: "Prix en CAD · sans engagement · TPS/TVQ en sus pour le Québec.",
+        capture_title: "Comment filmer pour de bons résultats",
+        capture_subtitle: "Le « bon » setup tient en 5 lignes. C'est gratuit.",
+        privacy_title: "Conçu pour le sport amateur, sans compromis sur les données.",
+        privacy_subtitle: "Replay traite des vidéos de jeunes joueurs. On le prend au sérieux.",
+        priv1_t: "Vidéo sur l'appareil",
+        priv1_d: "La vidéo brute ne quitte jamais ton téléphone. Seules les images extraites sont envoyées au serveur.",
+        priv2_t: "Chiffrement bout-en-bout",
+        priv2_d: "Les images sont chiffrées avant l'envoi et déchiffrées uniquement en mémoire au moment de l'analyse.",
+        priv3_t: "Suppression immédiate",
+        priv3_d: "Dès que l'analyse est terminée, les images sont effacées des serveurs. Aucun stockage.",
+        priv4_t: "Aucun partage",
+        priv4_d: "Tes vidéos et tes statistiques ne sont jamais revendues, ni utilisées pour entraîner d'autres modèles.",
         faq_title: "Questions fréquentes",
-        faq1_q: "Quels sports sont supportés ?",
-        faq1_a: "Replay lance avec le soccer (7v7 et 11v11). Le basketball et le volleyball suivront peu après. D'autres sports seront ajoutés selon la demande.",
-        faq2_q: "Est-ce que Replay est gratuit ?",
-        faq2_a: "Replay offre une version gratuite avec une analyse par mois. L'abonnement Replay+ débloque les analyses illimitées et les fonctionnalités avancées.",
-        faq3_q: "Faut-il une connexion internet ?",
-        faq3_a: "Oui, une connexion est nécessaire pour l'analyse IA. Les images sont envoyées de manière sécurisée au cloud, analysées, puis supprimées immédiatement.",
-        faq4_q: "Quel type de caméra me faut-il ?",
-        faq4_a: "Aucune caméra spéciale. N'importe quel téléphone avec une caméra suffit. Filme depuis le bord du terrain et Replay s'occupe du reste.",
-        faq5_q: "Mes vidéos restent-elles privées ?",
-        faq5_a: "Absolument. Les images envoyées au cloud sont chiffrées et supprimées dès l'analyse terminée. Aucune vidéo n'est stockée sur nos serveurs.",
-        faq6_q: "Comment Replay se compare à Hudl ou Veo ?",
-        faq6_a: "Hudl et Veo sont d'excellents outils pour les organisations avec des budgets importants. Replay cible les 99% restants : coachs bénévoles, parents, petits clubs. Pas de caméra à acheter, pas d'abonnement coûteux, et des conseils IA que les autres n'offrent pas.",
+        faq_subtitle: "Tu n'as pas trouvé ta réponse ? Écris-nous, on répond en moins de 24 h.",
+        faq1_q: "Quel type de caméra ou trépied me faut-il ?",
+        faq1_a: "Aucune caméra spéciale. Le téléphone que tu utilises tous les jours suffit. Un trépied basique (~30 $) est recommandé pour stabiliser l'image, mais ce n'est pas obligatoire. L'app valide ton cadrage dans les 5 premières secondes du match.",
+        faq2_q: "Mes vidéos et celles de mes joueurs sont-elles vraiment privées ?",
+        faq2_a: "Oui. La vidéo brute ne quitte jamais ton téléphone. Replay extrait des images, les chiffre, les envoie au serveur, les analyse, puis les supprime immédiatement. Aucun stockage, aucune revente, aucune utilisation pour entraîner d'autres modèles.",
+        faq3_q: "Quand Replay sera-t-il disponible pour mon sport ?",
+        faq3_a: "Soccer 7v7 dès le lancement (H2 2026). Soccer 11v11 quelques mois plus tard. Basketball, volleyball et hockey en 2027 selon la demande. Inscris-toi à la liste pour voter pour ton sport.",
         footer_tagline: "L'analyse sportive par IA. Montréal, Québec.",
         footer_product: "Produit",
         footer_contact: "Contact",
