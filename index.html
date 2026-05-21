@@ -8,7 +8,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Replay+ — L'analyse sportive par IA">
-  <meta property="og:description" content="Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.">
+  <meta property="og:description" content="Filme ton match. Replay fait le reste. Conseils de coaching personnalisés en quelques secondes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tryreplay.co">
   <meta property="og:image" content="https://tryreplay.co/og-image.png">
@@ -18,7 +18,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Replay+ — L'analyse sportive par IA">
-  <meta name="twitter:description" content="Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.">
+  <meta name="twitter:description" content="Filme ton match. Replay fait le reste. Conseils de coaching personnalisés en quelques secondes.">
   <meta name="twitter:image" content="https://tryreplay.co/og-image.png">
 
   <!-- Theme color (matches paper bg) -->
@@ -65,7 +65,7 @@
       <div class="hero-text">
         <p class="hero-eyebrow" data-i18n="hero_eyebrow">2026 — Beta privée</p>
         <h1 data-i18n="hero_h1">L'analyse sportive par IA, pour tout le monde.</h1>
-        <p class="lead" data-i18n="lead">Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.</p>
+        <p class="lead" data-i18n="lead">Filme ton match. Replay fait le reste. Conseils de coaching personnalisés en quelques secondes.</p>
         <div class="hero-cta">
           <a href="#waitlist" class="cta cta--large" data-i18n="cta_hero">Rejoindre la liste d'attente</a>
           <a href="#how" class="cta cta--ghost cta--large" data-i18n="cta_secondary">Voir comment ça marche</a>
@@ -379,14 +379,50 @@
       }
     });
 
-    // ── Force-play hero demo video (some mobile Safari setups need a kick) ──
+    // ── Force-play hero demo video ──
+    // Safari (especially in Low Power Mode) and some mobile browsers silently
+    // refuse autoplay even with `muted` + `playsinline` attributes. Set the
+    // properties explicitly in JS, then try to play on every reasonable signal:
+    // immediate, canplay/loadeddata, intersection-visible, and first user gesture.
     (() => {
       const v = document.querySelector('.demo-video');
       if (!v) return;
-      const tryPlay = () => v.play().catch(() => { /* ignore — poster stays */ });
-      if (v.readyState >= 2) tryPlay();
-      else v.addEventListener('loadeddata', tryPlay, { once: true });
-      // also retry once the page is interactive (covers some autoplay-blocked cases)
+      v.muted = true;
+      v.playsInline = true;
+      v.defaultMuted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+
+      let played = false;
+      const tryPlay = () => {
+        if (played && !v.paused) return;
+        const p = v.play();
+        if (p && typeof p.then === 'function') {
+          p.then(() => { played = true; }).catch(() => { /* will retry on next signal */ });
+        }
+      };
+
+      // 1. Try right away in case the browser already has the data.
+      tryPlay();
+      // 2. Try once the first frame is decoded.
+      v.addEventListener('canplay', tryPlay);
+      v.addEventListener('loadeddata', tryPlay);
+      // 3. Try when the element scrolls into view (covers cases where the
+      //    browser pauses autoplay for off-screen media).
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) tryPlay(); });
+        }, { threshold: 0.2 });
+        io.observe(v);
+      }
+      // 4. Last resort: first user gesture anywhere on the page.
+      const gestureEvents = ['pointerdown', 'touchstart', 'keydown', 'scroll'];
+      const onGesture = () => {
+        tryPlay();
+        gestureEvents.forEach((evt) => window.removeEventListener(evt, onGesture));
+      };
+      gestureEvents.forEach((evt) => window.addEventListener(evt, onGesture, { passive: true }));
+      // 5. Resume when tab becomes visible again.
       document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay(); });
     })();
 
@@ -422,7 +458,7 @@
         nav_cta: "Waitlist",
         hero_eyebrow: "2026 — Private beta",
         hero_h1: "AI sports analysis, for everyone.",
-        lead: "Film your match. The AI does the rest. Personalised coaching tips in seconds.",
+        lead: "Film your match. Replay does the rest. Personalised coaching tips in seconds.",
         description: `Replay is a mobile app that automatically analyses game and training videos using artificial intelligence. Just <strong>film with your phone</strong>. The app detects players, tracks movements, identifies key actions and generates <strong>personalised coaching tips</strong>. No specialised equipment needed.`,
         cta_hero: "Join the waitlist",
         cta_secondary: "See how it works",
@@ -507,7 +543,7 @@
         nav_cta: "Liste d'attente",
         hero_eyebrow: "2026 — Beta privée",
         hero_h1: "L'analyse sportive par IA, pour tout le monde.",
-        lead: "Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.",
+        lead: "Filme ton match. Replay fait le reste. Conseils de coaching personnalisés en quelques secondes.",
         description: `Replay est une application mobile qui analyse automatiquement les vidéos de matchs et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions clés et génère des <strong>conseils de coaching personnalisés</strong>. Aucun équipement spécialisé nécessaire.`,
         cta_hero: "Rejoindre la liste d'attente",
         cta_secondary: "Voir comment ça marche",
