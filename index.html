@@ -80,41 +80,19 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="phone">
-            <div class="phone-frame">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="hud-top">
-                  <span class="hud-time">00:42:18</span>
-                  <span class="hud-badge" data-i18n="hud_badge">Analyse</span>
-                </div>
-                <div class="pitch">
-                  <div class="pitch-center-line"></div>
-                  <div class="pitch-center-circle"></div>
-                  <div class="player-dot team-a p1"></div>
-                  <div class="player-dot team-a p2"></div>
-                  <div class="player-dot team-a p3"></div>
-                  <div class="player-dot team-a p4"></div>
-                  <div class="player-dot team-b p5"></div>
-                  <div class="player-dot team-b p6"></div>
-                  <div class="player-dot team-b p7"></div>
-                  <div class="player-dot ball-dot ball"></div>
-                </div>
-                <div class="hud-bottom">
-                  <div class="hud-stat">
-                    <span class="k">XT</span>
-                    <span class="v">+0.42</span>
-                  </div>
-                  <div class="hud-stat">
-                    <span class="k">Possession</span>
-                    <span class="v">62%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <figure class="hero-visual demo-block">
+          <video
+            class="demo-video"
+            autoplay muted loop playsinline preload="metadata"
+            poster="demo-poster.jpg"
+            aria-label="Démo de l'application Replay sur iPhone : analyse de match, statistiques, formations">
+            <source src="demo.mp4" type="video/mp4">
+          </video>
+          <figcaption class="demo-caption">
+            <span class="demo-tag">DÉMO</span>
+            <span class="demo-meta" data-i18n="demo_meta">Soccer 7v7 · cycle de 30 s · aucun son</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -406,6 +384,7 @@
         description: `Replay is a mobile app that automatically analyses game and training videos using artificial intelligence. Just <strong>film with your phone</strong>. The app detects players, tracks movements, identifies key actions and generates <strong>personalised coaching tips</strong>. No specialised equipment needed.`,
         cta_hero: "Join the waitlist",
         hero_meta: "Launching H2 · 2026",
+        demo_meta: "Soccer 7v7 · 30 s loop · no audio",
         hud_badge: "Analysing",
         how_title: "How it works",
         how_subtitle: "Three steps · zero equipment",
@@ -479,6 +458,7 @@
         description: `Replay est une application mobile qui analyse automatiquement les vidéos de matchs et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions clés et génère des <strong>conseils de coaching personnalisés</strong>. Aucun équipement spécialisé nécessaire.`,
         cta_hero: "Rejoindre la liste d'attente",
         hero_meta: "Lancement H2 · 2026",
+        demo_meta: "Soccer 7v7 · cycle de 30 s · aucun son",
         hud_badge: "Analyse",
         how_title: "Comment ça marche",
         how_subtitle: "Trois étapes · zéro équipement",
