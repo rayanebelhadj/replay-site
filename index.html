@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Replay — L'analyse sportive par IA</title>
+  <title>Replay+ — L'analyse sportive par IA</title>
   <meta name="description" content="Replay analyse automatiquement vos vidéos de matchs grâce à l'IA. Aucun équipement spécialisé nécessaire. Filmez, analysez, progressez.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Replay — L'analyse sportive par IA">
+  <meta property="og:title" content="Replay+ — L'analyse sportive par IA">
   <meta property="og:description" content="Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tryreplay.co">
@@ -17,17 +17,20 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Replay — L'analyse sportive par IA">
+  <meta name="twitter:title" content="Replay+ — L'analyse sportive par IA">
   <meta name="twitter:description" content="Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.">
   <meta name="twitter:image" content="https://tryreplay.co/og-image.png">
+
+  <!-- Theme color (matches paper bg) -->
+  <meta name="theme-color" content="#f6f7f4">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-  <!-- Fonts -->
+  <!-- Fonts (Inter Tight + JetBrains Mono, per DESIGN-SYSTEM.md §3) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
@@ -36,53 +39,107 @@
 </head>
 <body>
 
-  <!-- Language Toggle -->
-  <div class="lang-toggle">
-    <button class="active" data-lang="fr">FR</button>
-    <button data-lang="en">EN</button>
-  </div>
+  <!-- ═══ Sticky Header ═══ -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="wordmark" aria-label="Replay+">Replay<span class="accent">+</span></a>
+      <nav class="header-nav" aria-label="Section navigation">
+        <a href="#how" data-i18n="nav_how">Comment</a>
+        <a href="#features" data-i18n="nav_features">Fonctionnalités</a>
+        <a href="#compare" data-i18n="nav_compare">Comparaison</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      </nav>
+      <div class="header-right">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="active" data-lang="fr" type="button">FR</button>
+          <button data-lang="en" type="button">EN</button>
+        </div>
+        <a href="#waitlist" class="cta" data-i18n="nav_cta">Liste d'attente</a>
+      </div>
+    </div>
+  </header>
 
   <!-- ═══ Hero ═══ -->
   <section class="hero">
     <div class="container">
-      <h1 class="logo">Replay<span class="logo-dot">.</span></h1>
-      <p class="subtitle" data-i18n="subtitle">L'analyse sportive par IA, accessible à tous</p>
-      <p class="description" data-i18n="description">
-        Replay est une application mobile qui analyse automatiquement les vidéos de matchs
-        et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un
-        téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions
-        clés et génère des <strong>conseils de coaching personnalisés</strong> en quelques secondes.
-        Aucun équipement spécialisé nécessaire. Soccer, basketball, volleyball&nbsp;: Replay donne
-        accès à des outils d'analyse qui n'existaient que pour les équipes professionnelles.
-      </p>
-      <div class="hero-cta">
-        <a href="#waitlist" class="cta cta--large" data-i18n="cta_hero">Rejoindre la liste d'attente</a>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="hero-eyebrow" data-i18n="hero_eyebrow">2026 — Beta privée</p>
+          <h1 data-i18n="hero_h1">L'analyse sportive par IA, pour tout le monde.</h1>
+          <p class="lead" data-i18n="lead">Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.</p>
+          <p class="description" data-i18n="description">
+            Replay est une application mobile qui analyse automatiquement les vidéos de matchs
+            et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un
+            téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions
+            clés et génère des <strong>conseils de coaching personnalisés</strong>. Aucun équipement
+            spécialisé nécessaire.
+          </p>
+          <div class="hero-cta">
+            <a href="#waitlist" class="cta cta--large" data-i18n="cta_hero">Rejoindre la liste d'attente</a>
+            <span class="hero-meta" data-i18n="hero_meta">Lancement H2 · 2026</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="hud-top">
+                  <span class="hud-time">00:42:18</span>
+                  <span class="hud-badge" data-i18n="hud_badge">Analyse</span>
+                </div>
+                <div class="pitch">
+                  <div class="pitch-center-line"></div>
+                  <div class="pitch-center-circle"></div>
+                  <div class="player-dot team-a p1"></div>
+                  <div class="player-dot team-a p2"></div>
+                  <div class="player-dot team-a p3"></div>
+                  <div class="player-dot team-a p4"></div>
+                  <div class="player-dot team-b p5"></div>
+                  <div class="player-dot team-b p6"></div>
+                  <div class="player-dot team-b p7"></div>
+                  <div class="player-dot ball-dot ball"></div>
+                </div>
+                <div class="hud-bottom">
+                  <div class="hud-stat">
+                    <span class="k">XT</span>
+                    <span class="v">+0.42</span>
+                  </div>
+                  <div class="hud-stat">
+                    <span class="k">Possession</span>
+                    <span class="v">62%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-
   <!-- ═══ How It Works ═══ -->
-  <section class="how-it-works">
-    <div class="container container--wide">
-      <h2 class="section-title fade-in" data-i18n="how_title">Comment ça marche</h2>
-      <p class="section-subtitle fade-in" data-i18n="how_subtitle">Trois étapes. Zéro équipement.</p>
+  <section class="how-it-works" id="how">
+    <div class="container">
+      <header class="s-head fade-in">
+        <span class="num">01 — Méthode</span>
+        <h2 class="title" data-i18n="how_title">Comment ça marche</h2>
+        <span class="meta" data-i18n="how_subtitle">Trois étapes · zéro équipement</span>
+      </header>
       <div class="steps">
         <div class="step fade-in">
-          <span class="step-number">1</span>
-          <span class="step-icon">&#127909;</span>
+          <div class="step-num">Étape 01</div>
           <h3 data-i18n="step1_title">Filme</h3>
           <p data-i18n="step1_desc">Filme ton match ou entraînement avec n'importe quel téléphone. Aucune caméra spéciale requise.</p>
         </div>
         <div class="step fade-in">
-          <span class="step-number">2</span>
-          <span class="step-icon">&#129302;</span>
+          <div class="step-num">Étape 02</div>
           <h3 data-i18n="step2_title">Analyse</h3>
           <p data-i18n="step2_desc">L'IA détecte chaque joueur, suit les déplacements et identifie les moments clés automatiquement.</p>
         </div>
         <div class="step fade-in">
-          <span class="step-number">3</span>
-          <span class="step-icon">&#127942;</span>
+          <div class="step-num">Étape 03</div>
           <h3 data-i18n="step3_title">Progresse</h3>
           <p data-i18n="step3_desc">Reçois des conseils de coaching personnalisés et des exercices ciblés pour t'améliorer.</p>
         </div>
@@ -91,28 +148,31 @@
   </section>
 
   <!-- ═══ Features ═══ -->
-  <section class="features">
-    <div class="container container--wide">
-      <h2 class="section-title fade-in" data-i18n="features_title">Ce que Replay fait pour toi</h2>
-      <p class="section-subtitle fade-in" data-i18n="features_subtitle">Des outils pro, sans le prix pro.</p>
+  <section class="features" id="features">
+    <div class="container">
+      <header class="s-head fade-in">
+        <span class="num">02 — Produit</span>
+        <h2 class="title" data-i18n="features_title">Ce que Replay fait pour toi</h2>
+        <span class="meta" data-i18n="features_subtitle">Outils pro · prix accessible</span>
+      </header>
       <div class="features-grid">
         <div class="feature-card fade-in">
-          <span class="feature-icon">&#128065;</span>
+          <div class="feat-num">F-01</div>
           <h3 data-i18n="feat1_title">Détection des joueurs</h3>
           <p data-i18n="feat1_desc">L'IA identifie et suit chaque joueur en temps réel, même en mouvement rapide.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">&#128161;</span>
+          <div class="feat-num">F-02</div>
           <h3 data-i18n="feat2_title">Conseils IA personnalisés</h3>
           <p data-i18n="feat2_desc">Des recommandations de coaching adaptées au niveau et au style de jeu de chaque joueur.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">&#9917;</span>
+          <div class="feat-num">F-03</div>
           <h3 data-i18n="feat3_title">Multi-sport</h3>
           <p data-i18n="feat3_desc">Soccer, basketball, volleyball — et d'autres sports à venir. Une seule app pour tous.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">&#128241;</span>
+          <div class="feat-num">F-04</div>
           <h3 data-i18n="feat4_title">Aucun équipement</h3>
           <p data-i18n="feat4_desc">Ton téléphone suffit. Pas de caméra, capteur ou installation nécessaire.</p>
         </div>
@@ -121,16 +181,19 @@
   </section>
 
   <!-- ═══ Comparison ═══ -->
-  <section class="comparison">
-    <div class="container container--wide">
-      <h2 class="section-title fade-in" data-i18n="comp_title">Replay vs. la compétition</h2>
-      <p class="section-subtitle fade-in" data-i18n="comp_subtitle">Les mêmes fonctionnalités. Une fraction du prix.</p>
+  <section class="comparison" id="compare">
+    <div class="container">
+      <header class="s-head fade-in">
+        <span class="num">03 — Marché</span>
+        <h2 class="title" data-i18n="comp_title">Replay vs. la compétition</h2>
+        <span class="meta" data-i18n="comp_subtitle">Mêmes fonctions · fraction du prix</span>
+      </header>
       <div class="comparison-table-wrapper fade-in">
         <table class="comparison-table">
           <thead>
             <tr>
-              <th></th>
-              <th class="highlight">Replay</th>
+              <th>&nbsp;</th>
+              <th class="highlight">Replay+</th>
               <th>Hudl</th>
               <th>Veo</th>
               <th>Trace</th>
@@ -140,16 +203,16 @@
             <tr>
               <td data-i18n="comp_row1">Version gratuite</td>
               <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="cross">&#10005;</span></td>
-              <td><span class="cross">&#10005;</span></td>
-              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&minus;</span></td>
+              <td><span class="cross">&minus;</span></td>
+              <td><span class="cross">&minus;</span></td>
             </tr>
             <tr>
               <td data-i18n="comp_row2">Aucun équipement requis</td>
               <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="cross">&#10005;</span></td>
-              <td><span class="cross">&#10005;</span></td>
-              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&minus;</span></td>
+              <td><span class="cross">&minus;</span></td>
+              <td><span class="cross">&minus;</span></td>
             </tr>
             <tr>
               <td data-i18n="comp_row3">Détection IA des joueurs</td>
@@ -161,23 +224,23 @@
             <tr>
               <td data-i18n="comp_row4">Conseils de coaching IA</td>
               <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="cross">&#10005;</span></td>
-              <td><span class="cross">&#10005;</span></td>
-              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&minus;</span></td>
+              <td><span class="cross">&minus;</span></td>
+              <td><span class="cross">&minus;</span></td>
             </tr>
             <tr>
               <td data-i18n="comp_row5">Multi-sport</td>
               <td class="highlight"><span class="check">&#10003;</span></td>
               <td><span class="check">&#10003;</span></td>
-              <td><span class="cross">&#10005;</span></td>
-              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&minus;</span></td>
+              <td><span class="cross">&minus;</span></td>
             </tr>
             <tr>
               <td data-i18n="comp_row6">Prix annuel</td>
-              <td class="highlight" style="color:var(--green);font-weight:700;" data-i18n="comp_price_replay">Gratuit / 120$</td>
-              <td data-i18n="comp_price_hudl">~2 400$+</td>
-              <td data-i18n="comp_price_veo">~1 200$+</td>
-              <td data-i18n="comp_price_trace">~1 800$+</td>
+              <td class="highlight" data-i18n="comp_price_replay">Gratuit / 120 $</td>
+              <td data-i18n="comp_price_hudl">~2 400 $+</td>
+              <td data-i18n="comp_price_veo">~1 200 $+</td>
+              <td data-i18n="comp_price_trace">~1 800 $+</td>
             </tr>
           </tbody>
         </table>
@@ -187,18 +250,21 @@
   </section>
 
   <!-- ═══ Founder ═══ -->
-  <section class="founder">
+  <section class="founder" id="founder">
     <div class="container">
-      <h2 class="section-title fade-in" data-i18n="founder_title">Qui est derrière Replay</h2>
-      <p class="section-subtitle fade-in" data-i18n="founder_subtitle"></p>
+      <header class="s-head fade-in">
+        <span class="num">04 — Fondateur</span>
+        <h2 class="title" data-i18n="founder_title">Qui est derrière Replay</h2>
+        <span class="meta">Montréal · Québec</span>
+      </header>
       <div class="founder-card fade-in">
         <div class="founder-photo">
           <img src="founder.jpg" alt="Rayane Belhadj">
         </div>
         <div class="founder-text">
-          <blockquote data-i18n="founder_quote">J'ai passé des heures à filmer des matchs sans jamais pouvoir en tirer de vraies données. Les outils pro coûtent des milliers de dollars. J'ai construit Replay pour que chaque coach et chaque joueur ait accès à l'analyse qui fait la différence.</blockquote>
+          <blockquote class="founder-quote" data-i18n="founder_quote">J'ai passé des heures à filmer des matchs sans jamais pouvoir en tirer de vraies données. Les outils pro coûtent des milliers de dollars. J'ai construit Replay pour que chaque coach et chaque joueur ait accès à l'analyse qui fait la différence.</blockquote>
           <p class="founder-name">Rayane Belhadj</p>
-          <p class="founder-role" data-i18n="founder_role">Fondateur, Replay</p>
+          <p class="founder-role" data-i18n="founder_role">Fondateur · Replay</p>
         </div>
       </div>
     </div>
@@ -207,11 +273,15 @@
   <!-- ═══ Waitlist ═══ -->
   <section class="waitlist" id="waitlist">
     <div class="container">
-      <h2 class="section-title fade-in" data-i18n="waitlist_title">Sois parmi les premiers</h2>
+      <header class="s-head fade-in">
+        <span class="num">05 — Lancement</span>
+        <h2 class="title" data-i18n="waitlist_title">Sois parmi les premiers</h2>
+        <span class="meta" data-i18n="hero_meta">Lancement H2 · 2026</span>
+      </header>
       <p class="waitlist-note fade-in" data-i18n="waitlist_note">Inscris-toi pour un accès anticipé. Lancement bientôt.</p>
       <div class="social-proof fade-in" data-i18n="social_proof">Rejoins les coachs déjà inscrits</div>
-      <form class="waitlist-form fade-in" id="waitlist-form">
-        <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="email_placeholder" placeholder="ton@email.com">
+      <form class="waitlist-form fade-in" id="waitlist-form" novalidate>
+        <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="email_placeholder" placeholder="ton@email.com" aria-label="Email">
         <button type="submit" class="cta" data-i18n="cta_submit">Rejoindre</button>
       </form>
       <div class="referral fade-in">
@@ -219,11 +289,11 @@
       </div>
       <div class="badges fade-in">
         <div class="badge">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           <span data-i18n="badge_ios">iOS — Bientôt</span>
         </div>
         <div class="badge">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 2.237l-3.066 5.594c-.408.746-1.098 1.24-1.88 1.397L3.507 20.78c-.178.192-.09.483.162.537l7.02 1.516c.404.087.825-.059 1.072-.394l9.632-17.548c.247-.45.037-1.012-.45-1.191l-2.87-.99a.876.876 0 00-.55.027zM7.94 4.242l-5.252 9.576c-.247.45-.037 1.013.45 1.191l2.87.99a.876.876 0 00.55-.027l3.066-5.594c.408-.746 1.098-1.24 1.88-1.397l1.737-3.167-1.073-.232c-.403-.087-.825.059-1.071.394L7.94 4.242z"/></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 00-.83.22l-1.88 3.24a11.43 11.43 0 00-8.94 0L5.65 5.67a.643.643 0 00-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 001 18h22a10.78 10.78 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
           <span data-i18n="badge_android">Android — Bientôt</span>
         </div>
       </div>
@@ -231,10 +301,13 @@
   </section>
 
   <!-- ═══ FAQ ═══ -->
-  <section class="faq">
+  <section class="faq" id="faq">
     <div class="container">
-      <h2 class="section-title fade-in" data-i18n="faq_title">Questions fréquentes</h2>
-      <p class="section-subtitle fade-in">&nbsp;</p>
+      <header class="s-head fade-in">
+        <span class="num">06 — FAQ</span>
+        <h2 class="title" data-i18n="faq_title">Questions fréquentes</h2>
+        <span class="meta">&nbsp;</span>
+      </header>
       <div class="faq-list fade-in">
         <details class="faq-item">
           <summary data-i18n="faq1_q">Quels sports sont supportés ?</summary>
@@ -266,12 +339,25 @@
 
   <!-- ═══ Footer ═══ -->
   <footer>
-    <div class="footer-content">
-      <a href="mailto:contact@replayteam.com">contact@replayteam.com</a>
-      <span class="footer-divider">&middot;</span>
-      <a href="https://instagram.com/tryreplay" target="_blank" rel="noopener">@tryreplay</a>
+    <div class="container">
+      <div class="footer-brand">
+        <a href="/" class="wordmark" aria-label="Replay+">Replay<span class="accent">+</span></a>
+        <p class="footer-tagline" data-i18n="footer_tagline">L'analyse sportive par IA. Montréal, Québec.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_product">Produit</h4>
+        <a href="#how" data-i18n="nav_how">Comment</a>
+        <a href="#features" data-i18n="nav_features">Fonctionnalités</a>
+        <a href="#compare" data-i18n="nav_compare">Comparaison</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <a href="mailto:contact@replayteam.com">contact@replayteam.com</a>
+        <a href="https://instagram.com/tryreplay" target="_blank" rel="noopener">@tryreplay</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Replay <span data-i18n="footer_rights">· Tous droits réservés</span></p>
     </div>
-    <p class="footer-copy">&copy; 2026 Replay. Tous droits réservés.</p>
   </footer>
 
   <script>
@@ -306,39 +392,41 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // ── i18n toggle ──
+    // ── i18n ──
     const translations = {
       en: {
-        subtitle: "AI sports analysis, accessible to everyone",
-        description: `Replay is a mobile app that automatically analyzes game and training videos using artificial intelligence. Just <strong>film with your phone</strong>. The app detects players, tracks movements, identifies key actions and generates <strong>personalized coaching tips</strong> in seconds. No specialized equipment needed. Soccer, basketball, volleyball — Replay brings pro-level analysis tools to everyone.`,
+        nav_how: "How",
+        nav_features: "Features",
+        nav_compare: "Compare",
+        nav_faq: "FAQ",
+        nav_cta: "Waitlist",
+        hero_eyebrow: "2026 — Private beta",
+        hero_h1: "AI sports analysis, for everyone.",
+        lead: "Film your match. The AI does the rest. Personalised coaching tips in seconds.",
+        description: `Replay is a mobile app that automatically analyses game and training videos using artificial intelligence. Just <strong>film with your phone</strong>. The app detects players, tracks movements, identifies key actions and generates <strong>personalised coaching tips</strong>. No specialised equipment needed.`,
         cta_hero: "Join the waitlist",
-        stat1: "soccer players worldwide",
-        stat2: "of youth coaches are untrained volunteers",
-        stat3: "affordable analysis tool for the public",
-        viz_title: "AI in action",
-        viz_subtitle: "Real-time detection and tracking, right on your phone.",
-        hud_badge: "ANALYZING",
-        viz_label: "Simulated visualization of Replay analysis",
+        hero_meta: "Launching H2 · 2026",
+        hud_badge: "Analysing",
         how_title: "How it works",
-        how_subtitle: "Three steps. Zero equipment.",
+        how_subtitle: "Three steps · zero equipment",
         step1_title: "Film",
         step1_desc: "Film your game or practice with any phone. No special camera required.",
-        step2_title: "Analyze",
+        step2_title: "Analyse",
         step2_desc: "AI detects every player, tracks movements and identifies key moments automatically.",
         step3_title: "Improve",
-        step3_desc: "Get personalized coaching tips and targeted drills to level up your game.",
+        step3_desc: "Get personalised coaching tips and targeted drills to level up your game.",
         features_title: "What Replay does for you",
-        features_subtitle: "Pro tools, without the pro price.",
+        features_subtitle: "Pro tools · accessible price",
         feat1_title: "Player detection",
         feat1_desc: "AI identifies and tracks every player in real time, even during fast action.",
-        feat2_title: "Personalized AI coaching",
+        feat2_title: "Personalised AI coaching",
         feat2_desc: "Coaching recommendations tailored to each player's level and playing style.",
         feat3_title: "Multi-sport",
         feat3_desc: "Soccer, basketball, volleyball — and more sports coming. One app for all.",
         feat4_title: "No equipment",
         feat4_desc: "Your phone is all you need. No camera, sensor or setup required.",
         comp_title: "Replay vs. the competition",
-        comp_subtitle: "Same features. A fraction of the price.",
+        comp_subtitle: "Same features · fraction of the price",
         comp_row1: "Free version",
         comp_row2: "No equipment required",
         comp_row3: "AI player detection",
@@ -351,9 +439,8 @@
         comp_price_trace: "~$1,800+",
         comp_note: "Approximate prices based on public listings in 2025.",
         founder_title: "Who's behind Replay",
-        founder_subtitle: "",
         founder_quote: "I spent hours filming games without ever being able to extract real data. Pro tools cost thousands. I built Replay so every coach and player can access the analysis that makes the difference.",
-        founder_role: "Founder, Replay",
+        founder_role: "Founder · Replay",
         waitlist_title: "Be among the first",
         waitlist_note: "Sign up for early access. Launching soon.",
         social_proof: "Join the first coaches already signed up",
@@ -368,27 +455,33 @@
         faq2_q: "Is Replay free?",
         faq2_a: "Replay offers a free tier with one analysis per month. The Replay+ subscription unlocks unlimited analyses and advanced features.",
         faq3_q: "Do I need an internet connection?",
-        faq3_a: "Yes, a connection is required for AI analysis. Frames are securely sent to the cloud, analyzed, then immediately deleted.",
+        faq3_a: "Yes, a connection is required for AI analysis. Frames are securely sent to the cloud, analysed, then immediately deleted.",
         faq4_q: "What kind of camera do I need?",
         faq4_a: "No special camera. Any phone with a camera will do. Film from the sideline and Replay handles the rest.",
         faq5_q: "Are my videos kept private?",
         faq5_a: "Absolutely. Frames sent to the cloud are encrypted and deleted as soon as analysis is complete. No video is stored on our servers.",
         faq6_q: "How does Replay compare to Hudl or Veo?",
-        faq6_a: "Hudl and Veo are great tools for organizations with large budgets. Replay targets the other 99%: volunteer coaches, parents, small clubs. No camera to buy, no expensive subscription, and AI coaching tips the others don't offer."
+        faq6_a: "Hudl and Veo are great tools for organisations with large budgets. Replay targets the other 99%: volunteer coaches, parents, small clubs. No camera to buy, no expensive subscription, and AI coaching tips the others don't offer.",
+        footer_tagline: "AI sports analysis. Montréal, Québec.",
+        footer_product: "Product",
+        footer_contact: "Contact",
+        footer_rights: "· All rights reserved"
       },
       fr: {
-        subtitle: "L'analyse sportive par IA, accessible à tous",
-        description: `Replay est une application mobile qui analyse automatiquement les vidéos de matchs et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions clés et génère des <strong>conseils de coaching personnalisés</strong> en quelques secondes. Aucun équipement spécialisé nécessaire. Soccer, basketball, volleyball&nbsp;: Replay donne accès à des outils d'analyse qui n'existaient que pour les équipes professionnelles.`,
+        nav_how: "Comment",
+        nav_features: "Fonctionnalités",
+        nav_compare: "Comparaison",
+        nav_faq: "FAQ",
+        nav_cta: "Liste d'attente",
+        hero_eyebrow: "2026 — Beta privée",
+        hero_h1: "L'analyse sportive par IA, pour tout le monde.",
+        lead: "Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.",
+        description: `Replay est une application mobile qui analyse automatiquement les vidéos de matchs et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions clés et génère des <strong>conseils de coaching personnalisés</strong>. Aucun équipement spécialisé nécessaire.`,
         cta_hero: "Rejoindre la liste d'attente",
-        stat1: "joueurs de soccer dans le monde",
-        stat2: "des coachs jeunesse sont bénévoles sans formation",
-        stat3: "outil d'analyse accessible au grand public",
-        viz_title: "L'IA en action",
-        viz_subtitle: "Détection et suivi en temps réel, directement sur ton téléphone.",
-        hud_badge: "ANALYSE EN COURS",
-        viz_label: "Visualisation simulée de l'analyse Replay",
+        hero_meta: "Lancement H2 · 2026",
+        hud_badge: "Analyse",
         how_title: "Comment ça marche",
-        how_subtitle: "Trois étapes. Zéro équipement.",
+        how_subtitle: "Trois étapes · zéro équipement",
         step1_title: "Filme",
         step1_desc: "Filme ton match ou entraînement avec n'importe quel téléphone. Aucune caméra spéciale requise.",
         step2_title: "Analyse",
@@ -396,7 +489,7 @@
         step3_title: "Progresse",
         step3_desc: "Reçois des conseils de coaching personnalisés et des exercices ciblés pour t'améliorer.",
         features_title: "Ce que Replay fait pour toi",
-        features_subtitle: "Des outils pro, sans le prix pro.",
+        features_subtitle: "Outils pro · prix accessible",
         feat1_title: "Détection des joueurs",
         feat1_desc: "L'IA identifie et suit chaque joueur en temps réel, même en mouvement rapide.",
         feat2_title: "Conseils IA personnalisés",
@@ -406,22 +499,21 @@
         feat4_title: "Aucun équipement",
         feat4_desc: "Ton téléphone suffit. Pas de caméra, capteur ou installation nécessaire.",
         comp_title: "Replay vs. la compétition",
-        comp_subtitle: "Les mêmes fonctionnalités. Une fraction du prix.",
+        comp_subtitle: "Mêmes fonctions · fraction du prix",
         comp_row1: "Version gratuite",
         comp_row2: "Aucun équipement requis",
         comp_row3: "Détection IA des joueurs",
         comp_row4: "Conseils de coaching IA",
         comp_row5: "Multi-sport",
         comp_row6: "Prix annuel",
-        comp_price_replay: "Gratuit / 120$",
-        comp_price_hudl: "~2 400$+",
-        comp_price_veo: "~1 200$+",
-        comp_price_trace: "~1 800$+",
+        comp_price_replay: "Gratuit / 120 $",
+        comp_price_hudl: "~2 400 $+",
+        comp_price_veo: "~1 200 $+",
+        comp_price_trace: "~1 800 $+",
         comp_note: "Prix approximatifs basés sur les offres publiques en 2025.",
         founder_title: "Qui est derrière Replay",
-        founder_subtitle: "",
         founder_quote: "J'ai passé des heures à filmer des matchs sans jamais pouvoir en tirer de vraies données. Les outils pro coûtent des milliers de dollars. J'ai construit Replay pour que chaque coach et chaque joueur ait accès à l'analyse qui fait la différence.",
-        founder_role: "Fondateur, Replay",
+        founder_role: "Fondateur · Replay",
         waitlist_title: "Sois parmi les premiers",
         waitlist_note: "Inscris-toi pour un accès anticipé. Lancement bientôt.",
         social_proof: "Rejoins les premiers coachs déjà inscrits",
@@ -442,7 +534,11 @@
         faq5_q: "Mes vidéos restent-elles privées ?",
         faq5_a: "Absolument. Les images envoyées au cloud sont chiffrées et supprimées dès l'analyse terminée. Aucune vidéo n'est stockée sur nos serveurs.",
         faq6_q: "Comment Replay se compare à Hudl ou Veo ?",
-        faq6_a: "Hudl et Veo sont d'excellents outils pour les organisations avec des budgets importants. Replay cible les 99% restants : coachs bénévoles, parents, petits clubs. Pas de caméra à acheter, pas d'abonnement coûteux, et des conseils IA que les autres n'offrent pas."
+        faq6_a: "Hudl et Veo sont d'excellents outils pour les organisations avec des budgets importants. Replay cible les 99% restants : coachs bénévoles, parents, petits clubs. Pas de caméra à acheter, pas d'abonnement coûteux, et des conseils IA que les autres n'offrent pas.",
+        footer_tagline: "L'analyse sportive par IA. Montréal, Québec.",
+        footer_product: "Produit",
+        footer_contact: "Contact",
+        footer_rights: "· Tous droits réservés"
       }
     };
 

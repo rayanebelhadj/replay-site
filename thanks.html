@@ -3,24 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merci — Replay</title>
+  <title>Merci — Replay+</title>
+  <meta name="theme-color" content="#f6f7f4">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .thanks {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 96px 0;
+      border-bottom: none;
+    }
+    .thanks .eyebrow {
+      font-family: var(--f-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .thanks h1 {
+      font-family: var(--f-sans);
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    @media (min-width: 1024px) {
+      .thanks h1 { font-size: 64px; }
+    }
+    .thanks p {
+      font-size: 17px;
+      color: var(--ink-2);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.55;
+    }
+    .thanks-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .thanks .accent-line {
+      width: 48px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 auto 32px;
+    }
+  </style>
 </head>
 <body>
-  <section class="hero" style="min-height:100vh;display:flex;align-items:center;justify-content:center;">
-    <div class="container" style="text-align:center;">
-      <h1 class="logo">Replay<span class="logo-dot">.</span></h1>
-      <p style="font-size:2.5rem;margin-bottom:1rem;">&#127881;</p>
-      <h2 class="section-title" style="margin-bottom:0.75rem;">Merci !</h2>
-      <p style="color:var(--text-muted);font-size:1rem;max-width:440px;margin:0 auto 2rem;">
-        Tu es sur la liste. On te contactera dès que Replay sera prêt. En attendant, suis-nous pour les dernières nouvelles.
-      </p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="https://instagram.com/tryreplay" target="_blank" rel="noopener" class="cta" style="background:var(--bg-card);border:1px solid var(--border);color:var(--text);">@tryreplay</a>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="wordmark" aria-label="Replay+">Replay<span class="accent">+</span></a>
+      <div class="header-right">
+        <a href="/" class="cta cta--ghost">&larr; Accueil</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="thanks">
+    <div class="container">
+      <div class="accent-line"></div>
+      <p class="eyebrow">Confirmation</p>
+      <h1>Tu es sur la liste.</h1>
+      <p>On te contactera dès que Replay sera prêt. En attendant, suis-nous pour les dernières nouvelles.</p>
+      <div class="thanks-actions">
+        <a href="https://instagram.com/tryreplay" target="_blank" rel="noopener" class="cta cta--ghost">@tryreplay</a>
         <a href="/" class="cta">Retour à l'accueil</a>
       </div>
     </div>
