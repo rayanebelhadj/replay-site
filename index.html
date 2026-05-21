@@ -62,37 +62,53 @@
   <!-- ═══ Hero ═══ -->
   <section class="hero">
     <div class="container">
-      <div class="hero-grid">
-        <div class="hero-text">
-          <p class="hero-eyebrow" data-i18n="hero_eyebrow">2026 — Beta privée</p>
-          <h1 data-i18n="hero_h1">L'analyse sportive par IA, pour tout le monde.</h1>
-          <p class="lead" data-i18n="lead">Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.</p>
-          <p class="description" data-i18n="description">
-            Replay est une application mobile qui analyse automatiquement les vidéos de matchs
-            et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un
-            téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions
-            clés et génère des <strong>conseils de coaching personnalisés</strong>. Aucun équipement
-            spécialisé nécessaire.
-          </p>
-          <div class="hero-cta">
-            <a href="#waitlist" class="cta cta--large" data-i18n="cta_hero">Rejoindre la liste d'attente</a>
-            <span class="hero-meta" data-i18n="hero_meta">Lancement H2 · 2026</span>
-          </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow" data-i18n="hero_eyebrow">2026 — Beta privée</p>
+        <h1 data-i18n="hero_h1">L'analyse sportive par IA, pour tout le monde.</h1>
+        <p class="lead" data-i18n="lead">Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.</p>
+        <div class="hero-cta">
+          <a href="#waitlist" class="cta cta--large" data-i18n="cta_hero">Rejoindre la liste d'attente</a>
+          <a href="#how" class="cta cta--ghost cta--large" data-i18n="cta_secondary">Voir comment ça marche</a>
         </div>
+        <p class="hero-meta" data-i18n="hero_meta">Lancement H2 · 2026 · Soccer 7v7 d'abord</p>
+      </div>
 
-        <figure class="hero-visual demo-block">
-          <video
-            class="demo-video"
-            autoplay muted loop playsinline preload="metadata"
-            poster="demo-poster.jpg"
-            aria-label="Démo de l'application Replay sur iPhone : analyse de match, statistiques, formations">
-            <source src="demo.mp4" type="video/mp4">
-          </video>
-          <figcaption class="demo-caption">
-            <span class="demo-tag">DÉMO</span>
-            <span class="demo-meta" data-i18n="demo_meta">Soccer 7v7 · cycle de 30 s · aucun son</span>
-          </figcaption>
-        </figure>
+      <figure class="hero-visual demo-block fade-in">
+        <video
+          class="demo-video"
+          autoplay muted loop playsinline preload="auto"
+          poster="demo-poster.jpg"
+          aria-label="Démo de l'application Replay sur iPhone : analyse de match, statistiques, formations">
+          <source src="demo.mp4" type="video/mp4">
+        </video>
+        <figcaption class="demo-caption">
+          <span class="demo-tag">DÉMO</span>
+          <span class="demo-meta" data-i18n="demo_meta">Soccer 7v7 · cycle de 30 s · aucun son · ceci est l'application en vrai</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══ Stats strip ═══ -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <span class="stat-label" data-i18n="stat1_label">Joueurs soccer dans le monde</span>
+          <span class="stat-value">265<span class="stat-unit">M</span></span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-label" data-i18n="stat2_label">Coachs jeunesse bénévoles</span>
+          <span class="stat-value">78<span class="stat-unit">%</span></span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-label" data-i18n="stat3_label">Coût d'un outil pro / an</span>
+          <span class="stat-value">2 400<span class="stat-unit">$+</span></span>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-label" data-i18n="stat4_label">Plan Replay gratuit</span>
+          <span class="stat-value stat-value--accent">0<span class="stat-unit">$</span></span>
+        </div>
       </div>
     </div>
   </section>
@@ -248,31 +264,30 @@
     </div>
   </section>
 
-  <!-- ═══ Waitlist ═══ -->
+  <!-- ═══ Waitlist (inverted ink card) ═══ -->
   <section class="waitlist" id="waitlist">
     <div class="container">
-      <header class="s-head fade-in">
-        <span class="num">05 — Lancement</span>
-        <h2 class="title" data-i18n="waitlist_title">Sois parmi les premiers</h2>
-        <span class="meta" data-i18n="hero_meta">Lancement H2 · 2026</span>
-      </header>
-      <p class="waitlist-note fade-in" data-i18n="waitlist_note">Inscris-toi pour un accès anticipé. Lancement bientôt.</p>
-      <div class="social-proof fade-in" data-i18n="social_proof">Rejoins les coachs déjà inscrits</div>
-      <form class="waitlist-form fade-in" id="waitlist-form" novalidate>
-        <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="email_placeholder" placeholder="ton@email.com" aria-label="Email">
-        <button type="submit" class="cta" data-i18n="cta_submit">Rejoindre</button>
-      </form>
-      <div class="referral fade-in">
-        <p data-i18n="referral"><strong>Invite un coach</strong> et remonte dans la liste d'attente. Un lien de parrainage te sera envoyé après ton inscription.</p>
-      </div>
-      <div class="badges fade-in">
-        <div class="badge">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <span data-i18n="badge_ios">iOS — Bientôt</span>
-        </div>
-        <div class="badge">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 00-.83.22l-1.88 3.24a11.43 11.43 0 00-8.94 0L5.65 5.67a.643.643 0 00-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 001 18h22a10.78 10.78 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
-          <span data-i18n="badge_android">Android — Bientôt</span>
+      <div class="ink-card fade-in">
+        <span class="ink-eyebrow" data-i18n="ink_eyebrow">05 — Beta privée</span>
+        <h2 class="ink-title" data-i18n="waitlist_title">Sois parmi les premiers à utiliser Replay.</h2>
+        <p class="ink-lead" data-i18n="waitlist_note">Inscris-toi pour un accès anticipé. Lancement H2 2026. Aucun spam.</p>
+        <form class="waitlist-form" id="waitlist-form" novalidate>
+          <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="email_placeholder" placeholder="ton@email.com" aria-label="Email">
+          <button type="submit" class="cta cta--accent" data-i18n="cta_submit">Rejoindre</button>
+        </form>
+        <div class="ink-meta">
+          <div class="ink-meta-item">
+            <span class="ink-meta-k" data-i18n="social_proof">Coachs déjà inscrits</span>
+            <span class="ink-meta-v" data-i18n="social_proof_v">+ chaque semaine</span>
+          </div>
+          <div class="ink-meta-item">
+            <span class="ink-meta-k" data-i18n="referral_k">Parrainage</span>
+            <span class="ink-meta-v" data-i18n="referral_v">Invite un coach, remonte la liste.</span>
+          </div>
+          <div class="ink-meta-item">
+            <span class="ink-meta-k" data-i18n="badges_k">Plateformes</span>
+            <span class="ink-meta-v" data-i18n="badges_v">iOS &amp; Android — bientôt</span>
+          </div>
         </div>
       </div>
     </div>
@@ -314,6 +329,11 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══ Sticky mobile CTA ═══ -->
+  <div class="mobile-cta" id="mobile-cta" aria-hidden="false">
+    <a href="#waitlist" class="cta cta--accent" data-i18n="nav_cta">Liste d'attente</a>
+  </div>
 
   <!-- ═══ Footer ═══ -->
   <footer>
@@ -359,6 +379,28 @@
       }
     });
 
+    // ── Force-play hero demo video (some mobile Safari setups need a kick) ──
+    (() => {
+      const v = document.querySelector('.demo-video');
+      if (!v) return;
+      const tryPlay = () => v.play().catch(() => { /* ignore — poster stays */ });
+      if (v.readyState >= 2) tryPlay();
+      else v.addEventListener('loadeddata', tryPlay, { once: true });
+      // also retry once the page is interactive (covers some autoplay-blocked cases)
+      document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay(); });
+    })();
+
+    // ── Sticky mobile CTA hide near the waitlist section ──
+    (() => {
+      const bar = document.getElementById('mobile-cta');
+      const target = document.getElementById('waitlist');
+      if (!bar || !target) return;
+      const io = new IntersectionObserver(([entry]) => {
+        bar.classList.toggle('mobile-cta--hidden', entry.isIntersecting);
+      }, { threshold: 0.1 });
+      io.observe(target);
+    })();
+
     // ── Scroll fade-in ──
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -383,8 +425,19 @@
         lead: "Film your match. The AI does the rest. Personalised coaching tips in seconds.",
         description: `Replay is a mobile app that automatically analyses game and training videos using artificial intelligence. Just <strong>film with your phone</strong>. The app detects players, tracks movements, identifies key actions and generates <strong>personalised coaching tips</strong>. No specialised equipment needed.`,
         cta_hero: "Join the waitlist",
-        hero_meta: "Launching H2 · 2026",
-        demo_meta: "Soccer 7v7 · 30 s loop · no audio",
+        cta_secondary: "See how it works",
+        hero_meta: "Launching H2 · 2026 · Soccer 7v7 first",
+        demo_meta: "Soccer 7v7 · 30 s loop · no audio · this is the real app",
+        stat1_label: "Soccer players worldwide",
+        stat2_label: "Youth coaches who are volunteers",
+        stat3_label: "Cost of a pro tool per year",
+        stat4_label: "Replay free tier",
+        ink_eyebrow: "05 — Private beta",
+        social_proof_v: "+ every week",
+        referral_k: "Referral",
+        referral_v: "Invite a coach, move up the list.",
+        badges_k: "Platforms",
+        badges_v: "iOS & Android — soon",
         hud_badge: "Analysing",
         how_title: "How it works",
         how_subtitle: "Three steps · zero equipment",
@@ -420,8 +473,8 @@
         founder_title: "Who's behind Replay",
         founder_quote: "I spent hours filming games without ever being able to extract real data. Pro tools cost thousands. I built Replay so every coach and player can access the analysis that makes the difference.",
         founder_role: "Founder · Replay",
-        waitlist_title: "Be among the first",
-        waitlist_note: "Sign up for early access. Launching soon.",
+        waitlist_title: "Be among the first to use Replay.",
+        waitlist_note: "Sign up for early access. Launching H2 2026. No spam.",
         social_proof: "Join the first coaches already signed up",
         email_placeholder: "your@email.com",
         cta_submit: "Join",
@@ -457,8 +510,19 @@
         lead: "Filme ton match. L'IA fait le reste. Conseils de coaching personnalisés en quelques secondes.",
         description: `Replay est une application mobile qui analyse automatiquement les vidéos de matchs et d'entraînements grâce à l'intelligence artificielle. Il suffit de <strong>filmer avec un téléphone</strong>. L'app détecte les joueurs, suit leurs déplacements, identifie les actions clés et génère des <strong>conseils de coaching personnalisés</strong>. Aucun équipement spécialisé nécessaire.`,
         cta_hero: "Rejoindre la liste d'attente",
-        hero_meta: "Lancement H2 · 2026",
-        demo_meta: "Soccer 7v7 · cycle de 30 s · aucun son",
+        cta_secondary: "Voir comment ça marche",
+        hero_meta: "Lancement H2 · 2026 · Soccer 7v7 d'abord",
+        demo_meta: "Soccer 7v7 · cycle de 30 s · aucun son · ceci est l'application en vrai",
+        stat1_label: "Joueurs soccer dans le monde",
+        stat2_label: "Coachs jeunesse bénévoles",
+        stat3_label: "Coût d'un outil pro / an",
+        stat4_label: "Plan Replay gratuit",
+        ink_eyebrow: "05 — Beta privée",
+        social_proof_v: "+ chaque semaine",
+        referral_k: "Parrainage",
+        referral_v: "Invite un coach, remonte la liste.",
+        badges_k: "Plateformes",
+        badges_v: "iOS &amp; Android — bientôt",
         hud_badge: "Analyse",
         how_title: "Comment ça marche",
         how_subtitle: "Trois étapes · zéro équipement",
@@ -494,8 +558,8 @@
         founder_title: "Qui est derrière Replay",
         founder_quote: "J'ai passé des heures à filmer des matchs sans jamais pouvoir en tirer de vraies données. Les outils pro coûtent des milliers de dollars. J'ai construit Replay pour que chaque coach et chaque joueur ait accès à l'analyse qui fait la différence.",
         founder_role: "Fondateur · Replay",
-        waitlist_title: "Sois parmi les premiers",
-        waitlist_note: "Inscris-toi pour un accès anticipé. Lancement bientôt.",
+        waitlist_title: "Sois parmi les premiers à utiliser Replay.",
+        waitlist_note: "Inscris-toi pour un accès anticipé. Lancement H2 2026. Aucun spam.",
         social_proof: "Rejoins les premiers coachs déjà inscrits",
         email_placeholder: "ton@email.com",
         cta_submit: "Rejoindre",
