@@ -45,9 +45,9 @@
       <a href="/" class="wordmark" aria-label="Replay+">Replay<span class="accent">+</span></a>
       <nav class="header-nav" aria-label="Section navigation">
         <a href="#how" data-i18n="nav_how">Comment</a>
-        <a href="#features" data-i18n="nav_features">Fonctionnalités</a>
-        <a href="#compare" data-i18n="nav_compare">Comparaison</a>
-        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#features" data-i18n="nav_features">Livrables</a>
+        <a href="#personas" data-i18n="nav_personas">Pour qui</a>
+        <a href="#recognition" data-i18n="nav_recognition">Reconnaissance</a>
       </nav>
       <div class="header-right">
         <div class="lang-toggle" role="group" aria-label="Language">
@@ -86,30 +86,6 @@
           <span class="demo-meta" data-i18n="demo_meta">Soccer 7v7 · cycle de 30 s · aucun son · ceci est l'application en vrai</span>
         </figcaption>
       </figure>
-    </div>
-  </section>
-
-  <!-- ═══ Stats strip ═══ -->
-  <section class="stats-strip">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item fade-in">
-          <span class="stat-label" data-i18n="stat1_label">Joueurs soccer dans le monde</span>
-          <span class="stat-value">265<span class="stat-unit">M</span></span>
-        </div>
-        <div class="stat-item fade-in">
-          <span class="stat-label" data-i18n="stat2_label">Coachs jeunesse bénévoles</span>
-          <span class="stat-value">78<span class="stat-unit">%</span></span>
-        </div>
-        <div class="stat-item fade-in">
-          <span class="stat-label" data-i18n="stat3_label">Coût d'un outil pro / an</span>
-          <span class="stat-value">2 400<span class="stat-unit">$+</span></span>
-        </div>
-        <div class="stat-item fade-in">
-          <span class="stat-label" data-i18n="stat4_label">Plan Replay gratuit</span>
-          <span class="stat-value stat-value--accent">0<span class="stat-unit">$</span></span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -245,259 +221,82 @@
     </div>
   </section>
 
-  <!-- ═══ Sports supported ═══ -->
-  <section class="sports">
-    <div class="container">
-      <div class="sports-strip fade-in">
-        <span class="sports-strip__label" data-i18n="sports_label">Sports supportés</span>
-        <ul class="sports-strip__list">
-          <li class="sports-strip__item sports-strip__item--now">
-            <span class="sports-strip__tag">MAINTENANT</span>
-            <span class="sports-strip__name">Soccer 7v7</span>
-          </li>
-          <li class="sports-strip__item sports-strip__item--next">
-            <span class="sports-strip__tag">PROCHAINEMENT</span>
-            <span class="sports-strip__name">Soccer 11v11</span>
-          </li>
-          <li class="sports-strip__item sports-strip__item--later">
-            <span class="sports-strip__tag">2027</span>
-            <span class="sports-strip__name">Basketball · Volleyball · Hockey</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ Pricing ═══ -->
-  <section class="pricing" id="pricing">
+  <!-- ═══ Personas ═══ -->
+  <section class="personas" id="personas">
     <div class="container">
       <header class="s-head fade-in">
-        <span class="num">03 — Tarifs</span>
-        <h2 class="title" data-i18n="pricing_title">Choisis ton plan</h2>
-        <span class="meta" data-i18n="pricing_subtitle">Une version gratuite vraie de vraie. Les pros payent pour l'illimité.</span>
+        <span class="num">03 — Pour qui</span>
+        <h2 class="title" data-i18n="personas_title">À qui Replay s'adresse</h2>
+        <span class="meta" data-i18n="personas_subtitle">Construit pour ceux que les outils pro ont oubliés.</span>
       </header>
-      <div class="pricing-grid">
-        <div class="price-card fade-in">
-          <span class="price-card__tag">FREE</span>
-          <span class="price-card__name">Replay</span>
-          <div class="price-card__price">
-            <span class="price-card__amount">0 $</span>
-            <span class="price-card__unit">à vie</span>
-          </div>
-          <ul class="price-card__list">
-            <li>1 analyse complète / mois</li>
-            <li>Extraits annotés &amp; heatmaps</li>
-            <li>1 conseil de coaching par match</li>
-            <li>Soccer 7v7</li>
+      <div class="personas-grid">
+        <article class="persona-card fade-in">
+          <span class="persona-card__tag">COACH AMATEUR</span>
+          <h3 class="persona-card__title" data-i18n="persona1_t">Le coach qui filme avec son téléphone</h3>
+          <p class="persona-card__body" data-i18n="persona1_d">U9 jusqu'au U18, bénévole ou rémunéré. Replay te rend un rapport coachable sans tableur, sans montage, sans dépenser 2 000 $.</p>
+          <ul class="persona-card__list">
+            <li data-i18n="persona1_b1">Extraits clé prêts à montrer à l'équipe</li>
+            <li data-i18n="persona1_b2">Conseils ciblés pour le prochain entraînement</li>
+            <li data-i18n="persona1_b3">Stats simples par joueur</li>
           </ul>
-          <a href="#waitlist" class="cta cta--ghost price-card__cta">Commencer gratuitement</a>
-        </div>
-
-        <div class="price-card price-card--featured fade-in">
-          <span class="price-card__tag">RECOMMANDÉ</span>
-          <span class="price-card__name">Replay+</span>
-          <div class="price-card__price">
-            <span class="price-card__amount">99 $</span>
-            <span class="price-card__unit">/ an</span>
-          </div>
-          <ul class="price-card__list">
-            <li>Jusqu'à 30 analyses / mois</li>
-            <li>Conseils IA illimités</li>
-            <li>Rapport PDF par match</li>
-            <li>Comparaison entre matchs</li>
-            <li>Support prioritaire</li>
+        </article>
+        <article class="persona-card persona-card--featured fade-in">
+          <span class="persona-card__tag">JOUEUR · PARENT</span>
+          <h3 class="persona-card__title" data-i18n="persona2_t">Le joueur (ou son parent) qui veut progresser</h3>
+          <p class="persona-card__body" data-i18n="persona2_d">Tu sais que tu as bien joué mais tu n'as aucune donnée pour le prouver. Replay te donne tes propres stats, ta heatmap et tes moments forts en une seule analyse.</p>
+          <ul class="persona-card__list">
+            <li data-i18n="persona2_b1">Carrousel personnel de tes meilleures actions</li>
+            <li data-i18n="persona2_b2">Heatmap qui montre ta couverture</li>
+            <li data-i18n="persona2_b3">Évolution match après match</li>
           </ul>
-          <a href="#waitlist" class="cta cta--accent price-card__cta">Rejoindre la liste</a>
-        </div>
-
-        <div class="price-card fade-in">
-          <span class="price-card__tag">PRO</span>
-          <span class="price-card__name">Replay Pro</span>
-          <div class="price-card__price">
-            <span class="price-card__amount">1 490 $</span>
-            <span class="price-card__unit">/ an / club</span>
-          </div>
-          <ul class="price-card__list">
-            <li>Analyses illimitées</li>
-            <li>Multi-équipe (jusqu'à 8)</li>
-            <li>Export vidéo HD avec overlays</li>
-            <li>Accès API &amp; intégrations</li>
-            <li>Onboarding personnalisé</li>
+        </article>
+        <article class="persona-card fade-in">
+          <span class="persona-card__tag">PETIT CLUB</span>
+          <h3 class="persona-card__title" data-i18n="persona3_t">L'académie ou le petit club qui veut professionnaliser</h3>
+          <p class="persona-card__body" data-i18n="persona3_d">Sans payer Hudl à 2 400 $ par équipe. Replay équipe tes coachs en quelques minutes et te donne une vue d'ensemble par équipe et par joueur.</p>
+          <ul class="persona-card__list">
+            <li data-i18n="persona3_b1">Multi-équipes dans une même app</li>
+            <li data-i18n="persona3_b2">Cohérence du langage entre coachs</li>
+            <li data-i18n="persona3_b3">Aucun matériel à installer</li>
           </ul>
-          <a href="mailto:contact@replayteam.com?subject=Replay%20Pro" class="cta cta--ghost price-card__cta">Nous parler</a>
-        </div>
-
-        <div class="price-card price-card--venue fade-in">
-          <span class="price-card__tag">VENUE</span>
-          <span class="price-card__name">Pour les terrains</span>
-          <div class="price-card__price">
-            <span class="price-card__amount">Rev-share</span>
-            <span class="price-card__unit">40 %</span>
-          </div>
-          <ul class="price-card__list">
-            <li>Caméras fixes installées au terrain</li>
-            <li>Replay automatique pour chaque match</li>
-            <li>Aucun frais d'installation</li>
-            <li>Lancement 2027 H2</li>
-          </ul>
-          <a href="mailto:contact@replayteam.com?subject=Replay%20Venue" class="cta cta--ghost price-card__cta">Devenir partenaire</a>
-        </div>
+        </article>
       </div>
-      <p class="pricing-note fade-in" data-i18n="pricing_note">Prix en CAD · sans engagement · TPS/TVQ en sus pour le Québec.</p>
     </div>
   </section>
 
-  <!-- ═══ Comparison ═══ -->
-  <section class="comparison" id="compare">
+  <!-- ═══ Reconnaissance (concours + articles) ═══ -->
+  <section class="recognition" id="recognition">
     <div class="container">
       <header class="s-head fade-in">
-        <span class="num">03 — Marché</span>
-        <h2 class="title" data-i18n="comp_title">Replay vs. la compétition</h2>
-        <span class="meta" data-i18n="comp_subtitle">Mêmes fonctions · fraction du prix</span>
+        <span class="num">04 — Reconnaissance</span>
+        <h2 class="title" data-i18n="recognition_title">Reconnu par l'écosystème entrepreneurial</h2>
+        <span class="meta" data-i18n="recognition_subtitle">Mai 2026 · Réseau UQAM · École des sciences de la gestion</span>
       </header>
-      <div class="comparison-table-wrapper fade-in">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th class="highlight">Replay+</th>
-              <th>Hudl</th>
-              <th>Veo</th>
-              <th>Trace</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n="comp_row1">Version gratuite</td>
-              <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="cross">&minus;</span></td>
-              <td><span class="cross">&minus;</span></td>
-              <td><span class="cross">&minus;</span></td>
-            </tr>
-            <tr>
-              <td data-i18n="comp_row2">Aucun équipement requis</td>
-              <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="cross">&minus;</span></td>
-              <td><span class="cross">&minus;</span></td>
-              <td><span class="cross">&minus;</span></td>
-            </tr>
-            <tr>
-              <td data-i18n="comp_row3">Détection IA des joueurs</td>
-              <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="check">&#10003;</span></td>
-              <td><span class="check">&#10003;</span></td>
-              <td><span class="check">&#10003;</span></td>
-            </tr>
-            <tr>
-              <td data-i18n="comp_row4">Conseils de coaching IA</td>
-              <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="cross">&minus;</span></td>
-              <td><span class="cross">&minus;</span></td>
-              <td><span class="cross">&minus;</span></td>
-            </tr>
-            <tr>
-              <td data-i18n="comp_row5">Multi-sport</td>
-              <td class="highlight"><span class="check">&#10003;</span></td>
-              <td><span class="check">&#10003;</span></td>
-              <td><span class="cross">&minus;</span></td>
-              <td><span class="cross">&minus;</span></td>
-            </tr>
-            <tr>
-              <td data-i18n="comp_row6">Prix annuel</td>
-              <td class="highlight" data-i18n="comp_price_replay">Gratuit / 120 $</td>
-              <td data-i18n="comp_price_hudl">~2 400 $+</td>
-              <td data-i18n="comp_price_veo">~1 200 $+</td>
-              <td data-i18n="comp_price_trace">~1 800 $+</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="comparison-note fade-in" data-i18n="comp_note">Prix approximatifs basés sur les offres publiques en 2025.</p>
-    </div>
-  </section>
-
-  <!-- ═══ Capture guide ═══ -->
-  <section class="capture" id="capture">
-    <div class="container">
-      <header class="s-head fade-in">
-        <span class="num">05 — Capture</span>
-        <h2 class="title" data-i18n="capture_title">Comment filmer pour de bons résultats</h2>
-        <span class="meta" data-i18n="capture_subtitle">Le « bon » setup tient en 5 lignes. C'est gratuit.</span>
-      </header>
-      <div class="capture-grid">
-        <ul class="capture-list fade-in">
-          <li><span class="capture-list__k">01</span><div><strong>Trépied au bord du terrain.</strong> Au niveau de la ligne médiane, côté tribunes. Pas dans le but.</div></li>
-          <li><span class="capture-list__k">02</span><div><strong>Téléphone en mode paysage.</strong> Le terrain doit remplir l'image — pas de zoom, pas de balayage.</div></li>
-          <li><span class="capture-list__k">03</span><div><strong>Une seule prise.</strong> Lance la caméra avant le coup d'envoi, laisse rouler jusqu'au coup de sifflet final.</div></li>
-          <li><span class="capture-list__k">04</span><div><strong>Lumière naturelle suffit.</strong> Replay tolère grand-angle, contre-jour modéré et résolution 1080p ou plus.</div></li>
-          <li><span class="capture-list__k">05</span><div><strong>L'app vérifie le cadrage</strong> pendant les 5 premières secondes et te corrige avant que tu lances le match.</div></li>
-        </ul>
-        <figure class="capture-diagram fade-in" aria-label="Position recommandée du téléphone : trépied à mi-terrain, côté touche">
-          <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-            <!-- pitch -->
-            <rect x="20" y="20" width="280" height="160" fill="#1f6638" rx="4"/>
-            <rect x="20" y="20" width="280" height="160" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" rx="4"/>
-            <line x1="160" y1="20" x2="160" y2="180" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-            <circle cx="160" cy="100" r="22" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-            <rect x="20" y="60" width="32" height="80" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-            <rect x="268" y="60" width="32" height="80" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-            <!-- phone position -->
-            <line x1="160" y1="180" x2="160" y2="210" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 3"/>
-            <rect x="152" y="200" width="16" height="12" fill="var(--accent)" rx="2"/>
-            <text x="160" y="210" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink)" letter-spacing="1.5">TRÉPIED</text>
-            <!-- viewing cone -->
-            <polygon points="160,200 80,40 240,40" fill="var(--accent)" fill-opacity="0.1" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3"/>
-          </svg>
-          <figcaption>Position recommandée · trépied à la ligne médiane, côté touche.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ Privacy & trust ═══ -->
-  <section class="privacy" id="privacy">
-    <div class="container">
-      <header class="s-head fade-in">
-        <span class="num">06 — Vie privée</span>
-        <h2 class="title" data-i18n="privacy_title">Conçu pour le sport amateur, sans compromis sur les données.</h2>
-        <span class="meta" data-i18n="privacy_subtitle">Replay traite des vidéos de jeunes joueurs. On le prend au sérieux.</span>
-      </header>
-      <div class="privacy-grid">
-        <div class="privacy-item fade-in">
-          <span class="privacy-item__k">P-01</span>
-          <h3 data-i18n="priv1_t">Vidéo sur l'appareil</h3>
-          <p data-i18n="priv1_d">La vidéo brute ne quitte jamais ton téléphone. Seules les images extraites sont envoyées au serveur.</p>
-        </div>
-        <div class="privacy-item fade-in">
-          <span class="privacy-item__k">P-02</span>
-          <h3 data-i18n="priv2_t">Chiffrement bout-en-bout</h3>
-          <p data-i18n="priv2_d">Les images sont chiffrées avant l'envoi et déchiffrées uniquement en mémoire au moment de l'analyse.</p>
-        </div>
-        <div class="privacy-item fade-in">
-          <span class="privacy-item__k">P-03</span>
-          <h3 data-i18n="priv3_t">Suppression immédiate</h3>
-          <p data-i18n="priv3_d">Dès que l'analyse est terminée, les images sont effacées des serveurs. Aucun stockage.</p>
-        </div>
-        <div class="privacy-item fade-in">
-          <span class="privacy-item__k">P-04</span>
-          <h3 data-i18n="priv4_t">Aucun partage</h3>
-          <p data-i18n="priv4_d">Tes vidéos et tes statistiques ne sont jamais revendues, ni utilisées pour entraîner d'autres modèles.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ Founder (compact) ═══ -->
-  <section class="founder" id="founder">
-    <div class="container">
-      <div class="founder-mini fade-in">
-        <div class="founder-photo">
-          <img src="founder.jpg" alt="Rayane Belhadj">
-        </div>
-        <div class="founder-text">
-          <blockquote class="founder-quote" data-i18n="founder_quote">« Les outils pro coûtent des milliers de dollars. J'ai construit Replay pour que chaque coach amateur ait accès à l'analyse qui fait la différence. »</blockquote>
-          <p class="founder-meta"><span class="founder-name">Rayane Belhadj</span> · <span data-i18n="founder_role">Fondateur, Replay</span> · Montréal QC</p>
-        </div>
+      <div class="recognition-grid">
+        <a class="award-card fade-in" href="https://actualites.uqam.ca/2026/defi-oseentreprendre/" target="_blank" rel="noopener">
+          <div class="award-card__head">
+            <span class="award-card__tag">PRIX</span>
+            <span class="award-card__date">19 mai 2026</span>
+          </div>
+          <h3 class="award-card__title">Lauréat · Défi OSEntreprendre 2026</h3>
+          <p class="award-card__body">Catégorie étudiante — sélection locale UQAM. Replay reconnu parmi trois jeunes pousses étudiantes pour son approche de l'analyse sportive accessible.</p>
+          <div class="award-card__foot">
+            <span class="award-card__source">Actualités UQAM</span>
+            <span class="award-card__cta" data-i18n="read_article">Lire l'article →</span>
+          </div>
+        </a>
+        <a class="award-card award-card--featured fade-in" href="https://nouvelles.esg.uqam.ca/non-categorise/le-concours-mon-entreprise-2026-recompense-la-releve-entrepreneuriale/" target="_blank" rel="noopener">
+          <div class="award-card__head">
+            <span class="award-card__tag">PRIX</span>
+            <span class="award-card__date">21 mai 2026</span>
+          </div>
+          <h3 class="award-card__title">Prix Front Row Ventures — Concours Mon Entreprise 2026</h3>
+          <p class="award-card__body">Formation finance, rencontres VC et formation propriété intellectuelle. Replay sélectionné par le fonds étudiant en capital de risque du Québec.</p>
+          <div class="award-card__foot">
+            <span class="award-card__source">Nouvelles ESG UQAM</span>
+            <span class="award-card__cta" data-i18n="read_article">Lire l'article →</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -531,31 +330,6 @@
     </div>
   </section>
 
-  <!-- ═══ FAQ ═══ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <header class="s-head fade-in">
-        <span class="num">07 — FAQ</span>
-        <h2 class="title" data-i18n="faq_title">Questions fréquentes</h2>
-        <span class="meta" data-i18n="faq_subtitle">Tu n'as pas trouvé ta réponse ? Écris-nous, on répond en moins de 24 h.</span>
-      </header>
-      <div class="faq-list fade-in">
-        <details class="faq-item">
-          <summary data-i18n="faq1_q">Quel type de caméra ou trépied me faut-il ?</summary>
-          <div class="faq-answer" data-i18n="faq1_a">Aucune caméra spéciale. Le téléphone que tu utilises tous les jours suffit. Un trépied basique (~30 $) est recommandé pour stabiliser l'image, mais ce n'est pas obligatoire. L'app valide ton cadrage dans les 5 premières secondes du match.</div>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq2_q">Mes vidéos et celles de mes joueurs sont-elles vraiment privées ?</summary>
-          <div class="faq-answer" data-i18n="faq2_a">Oui. La vidéo brute ne quitte jamais ton téléphone. Replay extrait des images, les chiffre, les envoie au serveur, les analyse, puis les supprime immédiatement. Aucun stockage, aucune revente, aucune utilisation pour entraîner d'autres modèles.</div>
-        </details>
-        <details class="faq-item">
-          <summary data-i18n="faq3_q">Quand Replay sera-t-il disponible pour mon sport ?</summary>
-          <div class="faq-answer" data-i18n="faq3_a">Soccer 7v7 dès le lancement (H2 2026). Soccer 11v11 quelques mois plus tard. Basketball, volleyball et hockey en 2027 selon la demande. Inscris-toi à la liste pour voter pour ton sport.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ Sticky mobile CTA ═══ -->
   <div class="mobile-cta" id="mobile-cta" aria-hidden="false">
     <a href="#waitlist" class="cta cta--accent" data-i18n="nav_cta">Liste d'attente</a>
@@ -571,9 +345,9 @@
       <div class="footer-col">
         <h4 data-i18n="footer_product">Produit</h4>
         <a href="#how" data-i18n="nav_how">Comment</a>
-        <a href="#features" data-i18n="nav_features">Fonctionnalités</a>
-        <a href="#compare" data-i18n="nav_compare">Comparaison</a>
-        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#features" data-i18n="nav_features">Livrables</a>
+        <a href="#personas" data-i18n="nav_personas">Pour qui</a>
+        <a href="#recognition" data-i18n="nav_recognition">Reconnaissance</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_contact">Contact</h4>
@@ -678,9 +452,9 @@
     const translations = {
       en: {
         nav_how: "How",
-        nav_features: "Features",
-        nav_compare: "Compare",
-        nav_faq: "FAQ",
+        nav_features: "Deliverables",
+        nav_personas: "Who it's for",
+        nav_recognition: "Recognition",
         nav_cta: "Waitlist",
         hero_eyebrow: "2026 — Private beta",
         hero_h1: "Elite sports analysis, in every coach's pocket.",
@@ -751,6 +525,26 @@
         ret2_desc: "A heat map shows instantly who covers which zone, who drops, who presses — no need to rewatch 90 minutes of footage.",
         ret3_title: "AI coaching tips",
         ret3_desc: "Replay spots recurring patterns and suggests a targeted drill for your next session. Short, concrete, based on your match.",
+        personas_title: "Who Replay is for",
+        personas_subtitle: "Built for the people the pro tools forgot.",
+        persona1_t: "The coach who films on their phone",
+        persona1_d: "U9 through U18, volunteer or paid. Replay hands you a coachable report — no spreadsheet, no editing, no $2,000 invoice.",
+        persona1_b1: "Key clips ready to show the team",
+        persona1_b2: "Targeted tips for the next practice",
+        persona1_b3: "Simple per-player stats",
+        persona2_t: "The player (or parent) who wants to improve",
+        persona2_d: "You know you played well, but you have no data to prove it. Replay gives you your own stats, your heatmap and your best moments in one go.",
+        persona2_b1: "Personal carousel of your best plays",
+        persona2_b2: "Heatmap showing your coverage",
+        persona2_b3: "Progress tracked match after match",
+        persona3_t: "The academy or small club going pro",
+        persona3_d: "Without paying $2,400 per team to Hudl. Replay equips your coaches in minutes and gives you a per-team / per-player overview.",
+        persona3_b1: "Multi-team in one app",
+        persona3_b2: "Common language across coaches",
+        persona3_b3: "Zero equipment to install",
+        recognition_title: "Recognised by the entrepreneurial ecosystem",
+        recognition_subtitle: "May 2026 · UQAM network · School of Management.",
+        read_article: "Read the article →",
         sports_label: "Supported sports",
         pricing_title: "Pick your plan",
         pricing_subtitle: "A free tier that actually works. Pros pay for unlimited.",
@@ -782,9 +576,9 @@
       },
       fr: {
         nav_how: "Comment",
-        nav_features: "Fonctionnalités",
-        nav_compare: "Comparaison",
-        nav_faq: "FAQ",
+        nav_features: "Livrables",
+        nav_personas: "Pour qui",
+        nav_recognition: "Reconnaissance",
         nav_cta: "Liste d'attente",
         hero_eyebrow: "2026 — Beta privée",
         hero_h1: "L'analyse sportive d'élite, dans la poche de chaque coach.",
@@ -855,6 +649,26 @@
         ret2_desc: "Une carte de chaleur lit instantanément qui couvre quelle zone, qui décroche, qui presse — pas besoin d'analyser 90 minutes de vidéo.",
         ret3_title: "Conseils de coaching IA",
         ret3_desc: "Replay observe les patrons récurrents et te suggère un drill ciblé pour le prochain entraînement. Court, concret, basé sur ton match.",
+        personas_title: "À qui Replay s'adresse",
+        personas_subtitle: "Construit pour ceux que les outils pro ont oubliés.",
+        persona1_t: "Le coach qui filme avec son téléphone",
+        persona1_d: "U9 jusqu'au U18, bénévole ou rémunéré. Replay te rend un rapport coachable sans tableur, sans montage, sans dépenser 2 000 $.",
+        persona1_b1: "Extraits clé prêts à montrer à l'équipe",
+        persona1_b2: "Conseils ciblés pour le prochain entraînement",
+        persona1_b3: "Stats simples par joueur",
+        persona2_t: "Le joueur (ou son parent) qui veut progresser",
+        persona2_d: "Tu sais que tu as bien joué mais tu n'as aucune donnée pour le prouver. Replay te donne tes propres stats, ta heatmap et tes moments forts en une seule analyse.",
+        persona2_b1: "Carrousel personnel de tes meilleures actions",
+        persona2_b2: "Heatmap qui montre ta couverture",
+        persona2_b3: "Évolution match après match",
+        persona3_t: "L'académie ou le petit club qui veut professionnaliser",
+        persona3_d: "Sans payer Hudl à 2 400 $ par équipe. Replay équipe tes coachs en quelques minutes et te donne une vue d'ensemble par équipe et par joueur.",
+        persona3_b1: "Multi-équipes dans une même app",
+        persona3_b2: "Cohérence du langage entre coachs",
+        persona3_b3: "Aucun matériel à installer",
+        recognition_title: "Reconnu par l'écosystème entrepreneurial",
+        recognition_subtitle: "Mai 2026 · Réseau UQAM · École des sciences de la gestion.",
+        read_article: "Lire l'article →",
         sports_label: "Sports supportés",
         pricing_title: "Choisis ton plan",
         pricing_subtitle: "Une version gratuite vraie de vraie. Les pros payent pour l'illimité.",
